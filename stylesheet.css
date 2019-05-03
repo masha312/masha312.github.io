@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v13/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+}
+h1,
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 0.9;
+}
+.comparison {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#page-wrap {
+  max-width: 960px;
+  margin: auto;
+}
