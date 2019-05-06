@@ -1,17 +1,29 @@
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v13/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
 h1,
 h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  opacity: 0.9;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 .comparison {
   margin-top: 40px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 #page-wrap {
   max-width: 960px;
