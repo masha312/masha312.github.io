@@ -10,32 +10,33 @@
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
-h1,
-h2 {
+#container {
   font-family: 'Roboto', sans-serif;
-  opacity: 0.7;
-  letter-spacing: 1px;
-  font-weight: 300;
-  width: 560px;
-}
-header {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.comparison {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  color: rgba(0, 0, 0, 0.89);
+  letter-spacing: 0.2px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 9%;
+  left: 15%;
+  margin: auto;
   flex-wrap: wrap;
 }
-img {
-  width: 560px;
-  height: 420px;
+#intro {
+  margin-bottom: 24px;
 }
-.rotate {
-  transform: rotate(180deg);
+#intro h1 {
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+a {
+  color: #2f85a7;
+  transition-duration: 0.2s;
 }
