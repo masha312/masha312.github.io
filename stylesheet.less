@@ -1,36 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap');
 
-#container {
-    font-family: 'Roboto', sans-serif;
-    color: rgba(0, 0, 0, 0.89);
-    letter-spacing: 0.2px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: absolute;
-    top: 9%;
-    left: 15%;
-    margin: auto;
-    flex-wrap: wrap;
+@beige: #EFE8D4;
+@brown: #9E723F;
+@gray: #2C2C2C;
+
+html body {
+  background-color: @beige;
+  margin-top: 120px;
+  cursor: default;
 }
 
-#intro {
-    margin-bottom: 24px;
+header {
+  margin-bottom: 40px;
+}
+
+.container {
+    font-family: 'Lora', serif;
+    color: @gray;
+
+    h1, h2 {
+      color: @brown;
+      font-size: inherit;
+    }
 
     h1 {
-   margin-bottom: 0px;
-   font-weight: 400;
- }
-}
+      font-size: 24px;
+    }
 
-.links {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 32px;
-}
+    a {
+      color: @gray;
+      border-bottom: 2px solid fade(@brown, 40%);
+      padding: 0px 2px;
+      transition-duration: 0.3s;
 
-a {
-    color: #2f85a7;
-    transition-duration: 0.2s;
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+        background-color: fade(@brown, 40%);
+      }
+    }
 }

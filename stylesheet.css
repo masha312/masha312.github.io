@@ -1,42 +1,45 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Lora';
   font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v14/0QIvMX1D_JOuMwr7Jg.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Lora';
   font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url(https://fonts.gstatic.com/s/lora/v14/0QIgMX1D_JOuO7HeNtxunw.ttf) format('truetype');
 }
-#container {
-  font-family: 'Roboto', sans-serif;
-  color: rgba(0, 0, 0, 0.89);
-  letter-spacing: 0.2px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: absolute;
-  top: 9%;
-  left: 15%;
-  margin: auto;
-  flex-wrap: wrap;
+html body {
+  background-color: #EFE8D4;
+  margin-top: 120px;
+  cursor: default;
 }
-#intro {
-  margin-bottom: 24px;
+header {
+  margin-bottom: 40px;
 }
-#intro h1 {
-  margin-bottom: 0px;
-  font-weight: 400;
+.container {
+  font-family: 'Lora', serif;
+  color: #2C2C2C;
 }
-.links {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 32px;
+.container h1,
+.container h2 {
+  color: #9E723F;
+  font-size: inherit;
 }
-a {
-  color: #2f85a7;
-  transition-duration: 0.2s;
+.container h1 {
+  font-size: 24px;
+}
+.container a {
+  color: #2C2C2C;
+  border-bottom: 2px solid rgba(158, 114, 63, 0.4);
+  padding: 0px 2px;
+  transition-duration: 0.3s;
+}
+.container a:hover {
+  text-decoration: none;
+  color: inherit;
+  background-color: rgba(158, 114, 63, 0.4);
 }
