@@ -3,6 +3,7 @@
 @beige: #EFE8D4;
 @brown: #9E723F;
 @gray: #2C2C2C;
+@gray2: #595959;
 
 html body {
   background-color: @beige;
@@ -17,6 +18,7 @@ header {
 .container {
     font-family: 'Lora', serif;
     color: @gray;
+    margin-bottom: 104px;
 
     h1, h2 {
       color: @brown;
@@ -25,6 +27,27 @@ header {
 
     h1 {
       font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    h4, p {
+      line-height: 1.6;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: @gray2;
     }
 
     a {
@@ -36,7 +59,42 @@ header {
       &:hover {
         text-decoration: none;
         color: inherit;
-        background-color: fade(@brown, 40%);
+        background-color: fade(@brown, 20%);
+
+        + .tag {
+          display: inline-block;
+        }
       }
+    }
+
+    .link-to-blog, .link-to-home {
+      margin-top: 48px;
+    }
+
+    .top-menu {
+      margin-bottom: 40px;
+    }
+
+    .nav-links {
+      border-bottom: none;
+      padding: 6px 12px;
+      background-color: fade(@brown, 20%);
+      border-radius: 4px;
+    }
+
+    .blog-header {
+      margin-bottom: 24px;
+    }
+
+    .col-md-7 {
+      padding-left: 0px;
+    }
+
+    .article-image {
+      margin-bottom: 24px;
+    }
+
+    .disabled {
+      opacity: 0.3;
     }
 }

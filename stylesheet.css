@@ -23,6 +23,7 @@ header {
 .container {
   font-family: 'Lora', serif;
   color: #2C2C2C;
+  margin-bottom: 104px;
 }
 .container h1,
 .container h2 {
@@ -31,6 +32,24 @@ header {
 }
 .container h1 {
   font-size: 24px;
+}
+.container h3 {
+  font-size: 20px;
+  margin-top: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.container h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.container h4,
+.container p {
+  line-height: 1.6;
+}
+.container .caption {
+  font-size: 14px;
+  color: #595959;
 }
 .container a {
   color: #2C2C2C;
@@ -41,5 +60,33 @@ header {
 .container a:hover {
   text-decoration: none;
   color: inherit;
-  background-color: rgba(158, 114, 63, 0.4);
+  background-color: rgba(158, 114, 63, 0.2);
+}
+.container a:hover + .tag {
+  display: inline-block;
+}
+.container .link-to-blog,
+.container .link-to-home {
+  margin-top: 48px;
+}
+.container .top-menu {
+  margin-bottom: 40px;
+}
+.container .nav-links {
+  border-bottom: none;
+  padding: 6px 12px;
+  background-color: rgba(158, 114, 63, 0.2);
+  border-radius: 4px;
+}
+.container .blog-header {
+  margin-bottom: 24px;
+}
+.container .col-md-7 {
+  padding-left: 0px;
+}
+.container .article-image {
+  margin-bottom: 24px;
+}
+.container .disabled {
+  opacity: 0.3;
 }
