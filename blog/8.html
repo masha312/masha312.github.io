@@ -40,7 +40,7 @@
         <h4>Step 1: Recover Password page</h4>
         <p>Now you can make several copies of the column, depending on how big you expect your tables to be.</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-1.png"/>
+          <img style="width: 100%" src="images/16-1.png"/>
         </div>
         <p>The first step is the Recover Password page, which comes up as the first search result when you query “npm forgot password” (or anything similar).</p>
         <p>It has everything it should have:</p>
@@ -53,56 +53,56 @@
         <p>This line adds a nice human touch and shows empathy, without creating extra clutter on the screen.</p>
         <p>While the description isn’t necessary for creating a good user experience, the page would feel less personal without it:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-2.png"/>
+          <img style="width: 100%" src="images/16-2.png"/>
         </div>
         <p>The first time I read the description, it made me smile. I don’t think I’ve ever smiled before while resetting a password. :)</p>
         <h4>Step 2: Email</h4>
         <p>After you submit your email or password, you get a confirmation that a reset link has been sent:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-3.png"/>
+          <img style="width: 100%" src="images/16-3.png"/>
         </div>
         <p>Although the instructions are clear, the confirmation text could be improved. It’s good practice to say something like “If account exists, an email will be sent with further instructions” instead of “An email has been sent”.</p>
         <p>By not promising the user that an email will be sent and not disclosing whether the email/username even exists in the database, we 1) encourage them to double check their credentials (in case they don’t get the link) and 2) prevent phishing attacks.</p>
         <p>Here’s the actual email:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-4.png"/>
+          <img style="width: 100%" src="images/16-4.png"/>
           <div class="caption">love you too, npm</div>
         </div>
         <h4>Step 3: Temporary password link</h4>
         <p>Clicking on the link in the email opens the following page:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-5.png"/>
+          <img style="width: 100%" src="images/16-5.png"/>
         </div>
         <p>My favorite part here is the shortcut for copying the temporary password. Hovering over the string highlights it and clicking on it immediately copies it to the clipboard:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-6.gif"/>
+          <img style="width: 100%" src="images/16-6.gif"/>
           <div class="caption">Just hover and click! No need to select from beginning to end and open the context menu to copy.</div>
         </div>
         <p>Although it may seem like a minor enhancement, it can make a difference for a user who is in a rush and just wants to get the process over with. Manually highlighting the string from beginning to end and selecting “Copy” option from the context menu can take some time and may only further irritate the user.</p>
         <p>After you click <i>Login</i> on the <i>Password Reset</i> page, you are brought to the regular <i>Login</i> page:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-7.gif"/>
+          <img style="width: 100%" src="images/16-7.gif"/>
           <div class="caption">How cute is this little guy? Another reason to smile :)</div>
         </div>
         <h4>Step 4: Create a new password</h4>
         <p>Once you log in with the temporary password, you land on the Change Password page where you can create a new password:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-8.png"/>
+          <img style="width: 100%" src="images/16-8.png"/>
         </div>
         <p>In addition to having a clear title and specific text for the action button, this page gives great suggestions for coming up with a strong password. While, fortunately, most applications nowadays have strong password requirements, many fail to properly communicate them to the user. This is a guaranteed way to cause more frustration, so it’s important to let the user know right away which password combinations are acceptable and which are not.</p>
         <p>Nevertheless, even when we provide detailed guidelines, sometimes the user will still attempt to create an ineligible password. In that case, we should tell them what exactly went wrong and what they should do to make their password stronger. Npm handles this well by providing specific information either before the user even attempts to save the new password or in the error notification after they click <i>Change Password</i>.</p>
         <p>If the password is too short, npm will notify you right away by throwing an error message under the field and making the input border red:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-9.gif"/>
+          <img style="width: 100%" src="images/16-9.gif"/>
           <div class="caption">Error message: “Please enter a valid password that’s at least 7 characters”</div>
         </div>
         <p>If the password is either too common or has been compromised, npm will let you know that as well:</p>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-10.gif"/>
+          <img style="width: 100%" src="images/16-10.gif"/>
           <div class="caption">Error notification: “The password you have entered was detected on a public list of known compromised passwords. Please enter a different password”.</div>
         </div>
         <div class="article-image">
-          <img style="width: 640px" src="images/16-11.gif"/>
+          <img style="width: 100%" src="images/16-11.gif"/>
           <div class="caption">Error notification: “The provided password is too common. Please pick a more unique password”.</div>
         </div>
         <p>Npm also gives links to both lists, which makes it easy to quickly check whether a password combination is safe or not.</p>
