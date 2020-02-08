@@ -1,0 +1,86 @@
+<html>
+<head>
+    <!-- little changes make big differences -->
+    <title>Blog Post 16 - Masha S</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117363434-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-117363434-4');
+    </script>
+</head>
+<body>
+  <div class="container">
+    <div class="top-menu">
+      <a class="nav-links" href="../index.html">Home</a>
+      <a class="nav-links" href="../blog.html">Blog</a>
+    </div>
+    <header class="blog-header">
+      <h1>How to Create a Flexible Table Component Using Auto Layout in Figma</h1>
+      <h2>Dec 31, 2019 | 3 min read</h2>
+    </header>
+    <div class="col-md-7">
+      <article>
+        <p>Creating a flexible master component for tables has surely been a challenge for me. In the ideal world, tables should be as adaptable as possible:</p>
+        <ul>
+          <li>It should be easy to add and remove columns and rows</li>
+          <li>It should be easy to resize columns depending on the content</li>
+        </ul>
+        <p>Fortunately, with the introduction of Auto Layout, we can now quickly create a table component that would address the two above points.</p>
+        <p>Let’s take this step by step:</p>
+        <h4>Step 1</h4>
+        <p>To begin, make just one column. Add as many rows as you think your tables will ever need.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-1.png"/>
+        </div>
+        <h4>Step 2</h4>
+        <p>Set column items to grow horizontally— this will make it possible to automatically change column width when you type in a longer string.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-2.png"/>
+        </div>
+        <h4>Step 3</h4>
+        <p>Now you can make several copies of the column, depending on how big you expect your tables to be.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-3.png"/>
+        </div>
+        <h4>Step 4</h4>
+        <p>Group all columns together by adding Auto Layout. Set it to Horizontal and if needed, add padding between the columns.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-4.png"/>
+        </div>
+        <p>At this point, feel free to test resizing columns by either typing a longer string in any of the columns or making one of the columns smaller.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-8.gif"/>
+        </div>
+        <p>Looks sweet, isn’t it? Now let’s add an option to modify the numbers of rows and columns.</p>
+        <h4>Step 5</h4>
+        <p>To do so, group the table columns layer again and either add a frame or turn it into a master component. Check of the “Clip content” box on the right panel.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-5.png"/>
+        </div>
+        <h4>Step 6</h4>
+        <p>Select the Auto Layout layer and add left and top constraints to it.</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-6.png"/>
+        </div>
+        <p>Now you should also be able to resize your table as well 🎉</p>
+        <div class="article-image">
+          <img style="width: 640px" src="images/8-7.gif"/>
+        </div>
+        <p>Thank you for reading and Happy New Year 🎄</p>
+        <p>* * *</p>
+        <p><i>1/31 Edit: You can now access the flexible table component via my <a href="https://www.figma.com/c/file/805191184894852049/Table-component-using-Auto-Layout" target="_blank">Figma Community Profile</a>. Feel free to duplicate and adjust as you would like!</i></p>
+        <p>* * *</p>
+        <p>This article is also published on <a href="https://blog.prototypr.io/how-to-create-a-flexible-table-component-using-auto-layout-8e10db6521ac">Medium</a>.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
