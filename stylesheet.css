@@ -50,6 +50,8 @@ header {
 .container .caption {
   font-size: 14px;
   color: #595959;
+  text-align: center;
+  margin-top: 8px;
 }
 .container a {
   color: #2C2C2C;
@@ -79,13 +81,14 @@ header {
   border-radius: 4px;
 }
 .container .blog-header {
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 .container .col-md-7 {
   padding-left: 0px;
 }
 .container .article-image {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .container .disabled {
   opacity: 0.3;
