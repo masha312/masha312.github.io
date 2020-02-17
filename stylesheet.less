@@ -63,15 +63,19 @@ header {
         text-decoration: none;
         color: inherit;
         background-color: fade(@brown, 20%);
-
-        + .tag {
-          display: inline-block;
-        }
       }
     }
 
     .link-to-blog, .link-to-home {
       margin-top: 48px;
+    }
+
+    .image-link {
+      border-bottom: none;
+
+      &:hover {
+        background-color: none;
+      }
     }
 
     .top-menu {

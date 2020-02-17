@@ -65,12 +65,15 @@ header {
   color: inherit;
   background-color: rgba(158, 114, 63, 0.2);
 }
-.container a:hover + .tag {
-  display: inline-block;
-}
 .container .link-to-blog,
 .container .link-to-home {
   margin-top: 48px;
+}
+.container .image-link {
+  border-bottom: none;
+}
+.container .image-link:hover {
+  background-color: none;
 }
 .container .top-menu {
   margin-bottom: 40px;
