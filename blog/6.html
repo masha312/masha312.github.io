@@ -1,0 +1,109 @@
+<html>
+<head>
+    <!-- little changes make big differences -->
+    <title>Blog Post 6 - Masha S</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117363434-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-117363434-4');
+    </script>
+</head>
+<body>
+  <div class="container">
+    <div class="top-menu">
+      <a class="nav-links" href="../index.html">Home</a>
+      <a class="nav-links" href="../blog.html">Blog</a>
+    </div>
+    <header class="blog-header">
+      <h1>Sleek Designs for Improving Copying to Clipboard Experience</h1>
+      <h2>Jun 24, 2019 | 4 min read</h2>
+    </header>
+    <div class="col-md-7">
+      <article>
+        <h3>The default way (no sleek designs involved)</h3>
+        <p>Since copying is an essential command, there is a default way to do it. Let’s look at the typical user flow:</p>
+        <div class="article-image">
+          <img style="width: 100%" src="images/6-1.gif"/>
+          <div class="caption">The default way (featuring my favorite ipsum tool — neilipsum.pw)</div>
+        </div>
+        <ol>
+          <li>User hovers over text and positions the cursor at the beginning (or the end) of the string</li>
+          <li>User clicks and drags the mouse until the string is highlighted</li>
+          <li>User opens the context menu with a right- or control-click</li>
+          <li>User clicks “Copy” (can also be accomplished with a keyboard shortcut)</li>
+        </ol>
+        <p>Unfortunately, this is not the most user-friendly approach. Although it comes for free, it brings along a few little annoyances:</p>
+        <ul>
+          <li>First, it can take several seconds to properly position the cursor.</li>
+          <li>Second, once the user starts highlighting the string, they may realize that they didn’t position the cursor properly in the first place.</li>
+          <li>And third, even after they successfully highlight the string, they may accidentally click away and lose the highlight.</li>
+        </ul>
+        <p>The good news is that we can help the user to avoid these annoyances by creating an easier way to copy. While we can’t always predict which bits of text the user will want to select, these examples could be a safe bet:</p>
+        <ul>
+          <li>Email addresses</li>
+          <li>Translations</li>
+          <li>Passwords</li>
+          <li>Commands</li>
+          <li>Discount codes</li>
+        </ul>
+        <p>With that being said, let’s look at…</p>
+        <h3>The improved way</h3>
+        <p>A better way to approach this problem is to allow user copy text without highlighting it. We can achieve this by adding a copy-on-click button next to the text, as seen in the following examples from Bitbucket and Google Translate:</p>
+        <h4>Bitbucket</h4>
+        <div class="article-image">
+          <img style="width: 100%" src="images/6-2.gif"/>
+          <div class="caption">Bitbucket</div>
+        </div>
+        <p>Clicking on the icon copies the checkout command. When you hover over the icon, a neat tooltip appears and informs you of the upcoming action. However, after you click the icon, some things get unclear:</p>
+        <ul>
+          <li>First, there’s no feedback confirming that you copied text to clipboard</li>
+          <li>Second, since there’s no feedback and the text is highlighted, you may assume that clicking the icon only highlighted the text, without actually copying it</li>
+        </ul>
+        <h3>Google Translate</h3>
+        <div class="article-image">
+          <img style="width: 100%" src="images/6-3.gif"/>
+          <div class="caption">Google Translate</div>
+        </div>
+        <p>Clicking on the icon in the bottom right corner will copy the translation. Just like in Bitbucket, hovering over the icon will display a “Copy” title. Unlike in Bitbucket, however, there’s also a confirmation tooltip.</p>
+        <p>One drawback to Google’s design is that the icon is positioned too far from the text. If the user doesn’t intentionally explore the icons, they may not even become aware of the feature.</p>
+        <p>* * *</p>
+        <p>While adding a button is a good option, it requires the user to learn and follow a new procedure. In addition, there’s not a widely recognized icon for copying to clipboard, which can make it difficult to spot the functionality. Therefore, if you still decide to incorporate this feature into your design, it might be a better idea to use text instead, as seen on Unsplash:</p>
+        <div class="article-image">
+          <img style="width: 100%" src="images/6-4.gif"/>
+          <div class="caption">Unsplash</div>
+        </div>
+        <p>Personally, I am more likely to use a button with text than with some ambiguous icon. Whenever I see an icon, I usually automatically opt-in for the default way to copy, even if it takes longer.</p>
+        <p>With this in mind, could there still be a better way to copy text? In my opinion, yes.</p>
+        <h3>The Best Way (I’ve seen so far)</h3>
+        <p>A few days ago, I had to reset my password in npm. I needed to copy a temporary password and that’s how it went:</p>
+        <div class="article-image">
+          <img style="width: 100%" src="images/6-5.gif"/>
+          <div class="caption">Resetting password for npm</div>
+        </div>
+        <p>So what’s going on here? Let’s break it down:</p>
+        <ol>
+          <li>I hover over the password to start highlighting and… BOOM! The moment I hover, it highlights “on its own”.
+          <li>I click to open the context menu and instead see a message notifying me that the string was already copied to clipboard.
+        </ol>
+        <p>This flow is nearly identical to the default way of copying — the only difference is that npm always remains one step ahead. It takes care of all the little annoyances before they can occur:</p>
+        <ul>
+          <li>#1 ensures that I never have to worry about highlighting the string</li>
+          <li>#2 frees me from having to select the proper command and prevents me from accidentally clicking away</li>
+        </ul>
+        <p>In addition, I don’t have to follow a new procedure. I keep doing what I usually do and npm takes the responsibility to make the process easier, instead of making me learn how to do it myself.</p>
+        <p>* * *</p>
+        <p>While npm offers a very neat method, it obviously would not work everywhere. Not every case is as straightforward and we can’t always predict the exact string the user will want to copy. We also wouldn’t want to frustrate the user by mistakenly getting in their way.</p>
+        <p>Nevertheless, we should search for elegant solutions whenever we can. The combination of little improvements like these is what truly creates a better experience.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
