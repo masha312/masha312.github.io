@@ -100,6 +100,11 @@ header {
 .container .disabled {
   opacity: 0.3;
 }
+.code-block {
+  padding: 8px 12px;
+  border-radius: 3px;
+  background-color: rgba(158, 114, 63, 0.1);
+}
 .photo-gallery {
   margin-top: 0px;
 }
