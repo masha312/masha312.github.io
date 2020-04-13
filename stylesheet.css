@@ -3,14 +3,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v14/0QIvMX1D_JOuMwr7Jg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Lora Bold'), local('Lora-Bold'), url(https://fonts.gstatic.com/s/lora/v14/0QIgMX1D_JOuO7HeNtxunw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787z5vBJBkqg.ttf) format('truetype');
 }
 html body {
   background-color: #EFE8D4;
@@ -48,11 +48,23 @@ header {
 .container p {
   line-height: 1.6;
 }
+.container h5 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: #595959;
+  letter-spacing: 2px;
+  margin-top: 56px;
+  opacity: 0.6;
+}
 .container .caption {
   font-size: 14px;
   color: #9E723F;
   text-align: center;
   margin-top: 8px;
+}
+.container .caption a {
+  color: #9E723F;
 }
 .container a {
   color: #2C2C2C;
