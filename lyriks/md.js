@@ -28,12 +28,12 @@ const line6text = new Array(50).fill(line6).join(' ');
 const block6 = document.querySelector('.block6');
 block6.innerHTML = line6text;
 
-const line7 = "I know they see it I know they hear it I know they're watching it I know they're near it I know they fear it There is no stopping it";
+const line7 = "Computers polluting your soul Just shut up and do what you're told And see what the future will hold";
 const line7text = new Array(50).fill(line7).join(' ');
 const block7 = document.querySelector('.block7');
 block7.innerHTML = line7text;
 
-const line8 = "Information Information Communication Information Information Communication It feels like we're losing control";
+const line8 = "It feels like we're losing control Computers polluting your soul Just shut up and do what you're told And see what the future will hold";
 const line8text = new Array(50).fill(line8).join(' ');
 const block8 = document.querySelector('.block8');
 block8.innerHTML = line8text;
