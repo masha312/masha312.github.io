@@ -1,0 +1,35 @@
+.confetto {
+  position: absolute;
+  border-radius: 1px;
+  opacity: 0;
+  animation: pulse 1.5s infinite;
+}
+
+.confetti-container {
+  height: 100vh;
+}
+
+body {
+  /*height: vh;*/
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(300vw);
+  }
+}
