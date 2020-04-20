@@ -1,3 +1,24 @@
+body {
+  background-color: #f8f8f8;
+}
+
+button {
+  margin: auto;
+  background: none;
+  outline: none;
+  border: 3px solid #00b4cc66;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: #00b4cc;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+section {
+  display: flex;
+}
+
 .confetto {
   position: absolute;
   border-radius: 1px;
@@ -7,18 +28,6 @@
 
 .confetti-container {
   height: 100vh;
-}
-
-body {
-  /*height: vh;*/
-}
-
-button {
-  margin: auto;
-}
-
-section {
-  display: flex;
 }
 
 @keyframes pulse {
