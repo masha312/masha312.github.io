@@ -9,6 +9,7 @@ function createConfetti() {
     assignAnimationDelay(div);
     document.getElementsByClassName('confetti-container')[0].appendChild(div);
   }
+  removeButton();
 }
 
 function assignPosition(confetto) {
@@ -46,4 +47,9 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-createConfetti();
+function removeButton() {
+  var elem = document.getElementById('confetti-btn');
+  elem.parentNode.removeChild(elem);
+}
+
+// createConfetti();

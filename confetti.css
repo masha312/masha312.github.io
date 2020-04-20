@@ -13,6 +13,14 @@ body {
   /*height: vh;*/
 }
 
+button {
+  margin: auto;
+}
+
+section {
+  display: flex;
+}
+
 @keyframes pulse {
   0% {
     opacity: 0;
