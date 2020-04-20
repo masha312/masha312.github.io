@@ -5,7 +5,7 @@ body {
 button {
   margin: auto;
   background: none;
-  outline: none;
+  outline: none !important;
   border: 3px solid #00b4cc66;
   background-color: transparent;
   border-radius: 4px;
