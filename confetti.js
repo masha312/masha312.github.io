@@ -1,46 +1,69 @@
-function createConfetti() {
-  for (var i = 0; i < 700; i++) {
+generateElements = (numOfElements, className, isSvg) => {
+  removeElementsByClass(`${className}`);
+  for (var i = 0; i < numOfElements; i++) {
     var div = document.createElement('div');
-    div.setAttribute('class', 'confetto');
+    div.setAttribute('class', `${className} element`);
+
+    if (isSvg) {
+      div.style.content = `url(svg/${className}.svg)`;
+    } else {
+      assignSkew(div);
+      assignSize(div);
+      assignBackgroundColor(div);
+    }
+
+    if (className === 'squiggly') {
+      assignBackgroundColor(div);
+    }
+
+    assignRotate(div);
     assignPosition(div);
-    assignSkewAndRotate(div);
-    assignSize(div);
-    assignColor(div);
     assignAnimationDelay(div);
     document.getElementsByClassName('confetti-container')[0].appendChild(div);
   }
-  removeButton();
 }
 
-function assignPosition(confetto) {
-  const randomLeft = random(0, 100);
-  const randomTop = random(0, 100);
-  confetto.style.left = `${randomLeft}%`;
-  confetto.style.top = `${randomTop}%`;
+removeElementsByClass = className => {
+    var elements = document.getElementsByClassName(className);
+    const elLength = elements.length;
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
 }
 
-function assignSkewAndRotate(confetto) {
+function assignPosition(element) {
+  const randomLeft = random(0, 99);
+  const randomTop = random(0, 99);
+  element.style.left = `${randomLeft}%`;
+  element.style.top = `${randomTop}%`;
+}
+
+function assignSkew(element) {
   const randomTransformNumber = random(-90, 90);
-  confetto.style.transform = `skew(${randomTransformNumber}deg)`;
-  confetto.style.transform = `rotate(${randomTransformNumber}deg)`;
+  element.style.transform = `skew(${randomTransformNumber}deg)`;
 }
 
-function assignSize(confetto) {
-  const randomHeight = random(8, 16);
-  const randomWidth = random(12, 24);
-  confetto.style.height = `${randomHeight}px`;
-  confetto.style.width=`${randomWidth}px`;
+function assignRotate(element) {
+  const randomTransformNumber = random(-90, 90);
+  element.style.transform = `rotate(${randomTransformNumber}deg)`;
 }
 
-function assignColor(confetto) {
+function assignSize(element) {
+  const randomHeight = random(4, 12);
+  const randomWidth = random(8, 16);
+  element.style.height = `${randomHeight}px`;
+  element.style.width=`${randomWidth}px`;
+}
+
+function assignBackgroundColor(element) {
   const arrayOfColors = ['#ff57b0', '#1bb7fa', '#fa561b', '#0cc95e', '#c90c5e', '#f2e935', '#0637c9'];
   const randomColor = random(0, 7);
-  confetto.style.backgroundColor = `${arrayOfColors[randomColor]}`;
+  element.style.backgroundColor = `${arrayOfColors[randomColor]}`;
 }
 
-function assignAnimationDelay(confetto) {
+function assignAnimationDelay(element) {
   const delayNumber = random(0, 2000);
-  confetto.style.animationDelay = `${delayNumber}ms`;
+  element.style.animationDelay = `${delayNumber}ms`;
 }
 
 function random(min, max) {
@@ -51,5 +74,3 @@ function removeButton() {
   var elem = document.getElementById('confetti-btn');
   elem.parentNode.removeChild(elem);
 }
-
-// createConfetti();

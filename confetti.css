@@ -1,33 +1,65 @@
-body {
-  background-color: #f8f8f8;
-}
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@562&display=swap');
 
-button {
-  margin: auto;
-  background: none;
-  outline: none !important;
-  border: 3px solid #00b4cc66;
-  background-color: transparent;
-  border-radius: 4px;
-  padding: 8px 16px;
-  color: #00b4cc;
-  font-weight: bold;
-  letter-spacing: 0.5px;
+body {
+  /*background-color: #f8f8f8;*/
+  font-family: 'Literata', serif;
+  background: linear-gradient(275deg, #e2f9ff, #ffddf9);
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
 }
 
 section {
   display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
 }
 
-.confetto {
+.element {
   position: absolute;
   border-radius: 1px;
   opacity: 0;
-  animation: pulse 1.5s infinite;
+  animation: pulse 0.5s infinite;
+}
+
+h3 {
+  padding: 24px;
+  padding-bottom: 8px;
+  padding-top: 32px;
+  color: #595959;
+  font-size: 24px;
+  cursor: default;
 }
 
 .confetti-container {
   height: 100vh;
+}
+
+.confetti-generator {
+  margin: auto;
+  z-index: 2;
+  width: 90vw;
+  max-width: 400px;
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  height: 93vh;
+  max-height: 560px;
+}
+
+.squiggly, .loopie, .avocado, .egg {
+  user-select: none;
+
+}
+
+.loopie svg {
+  stroke: blue;
 }
 
 @keyframes pulse {
@@ -42,11 +74,109 @@ section {
   }
 }
 
-@keyframes moveDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(300vw);
-  }
+.slidecontainer {
+  width: 100%;
+}
+
+.sliders {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 16px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 8px;
+  background: #0000000d;
+  border-radius: 2px;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: auto;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.slider:hover {
+  background: #0000001c;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: blue;
+  cursor: pointer;
+}
+
+.avocado-slider::-webkit-slider-thumb {
+  background: url('svg/avocado.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.loopie-slider::-webkit-slider-thumb {
+  background: url('svg/loopie.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.squiggly-slider::-webkit-slider-thumb {
+  background: url('svg/squiggly.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.confetto-slider::-webkit-slider-thumb {
+  background: url('svg/confetto.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.egg-slider::-webkit-slider-thumb {
+  background: url('svg/egg.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.star-slider::-webkit-slider-thumb {
+  background: url('svg/star.svg');
+  width: 32px;
+  height: 32px;
+  transform: rotate(90deg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.watermelon-slider::-webkit-slider-thumb {
+  background: url('svg/watermelon.svg');
+  width: 32px;
+  height: 32px;
+  transform: rotate(20deg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
 }
