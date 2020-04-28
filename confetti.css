@@ -111,6 +111,7 @@ h3 {
   height: 40px;
   background: blue;
   cursor: pointer;
+  outline: none !important;
 }
 
 .avocado-slider::-webkit-slider-thumb {
