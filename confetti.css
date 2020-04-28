@@ -166,7 +166,8 @@ p {
   padding-right: 16px;
   color: #d2d2d2;
   letter-spacing: 1px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  cursor: default;
 }
 
 a {
