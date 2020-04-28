@@ -13,12 +13,16 @@ body {
 }
 
 h3 {
-  padding: 24px;
+  padding: 20px;
   padding-bottom: 8px;
   padding-top: 32px;
   color: @gray;
   font-size: 24px;
   cursor: default;
+
+  .emoji {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -99,20 +103,8 @@ a {
   }
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 32px;
-  height: 32px;
-  background: blue;
-  cursor: pointer;
-  outline: none !important;
-}
-
 .avocado-slider::-webkit-slider-thumb {
   background: url('svg/avocado.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .loopie-slider::-webkit-slider-thumb {
@@ -123,39 +115,39 @@ a {
 
 .squiggly-slider::-webkit-slider-thumb {
   background: url('svg/squiggly.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .confetto-slider::-webkit-slider-thumb {
   background: url('svg/confetto.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .egg-slider::-webkit-slider-thumb {
   background: url('svg/egg.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .star-slider::-webkit-slider-thumb {
   background: url('svg/star.svg');
   transform: rotate(90deg);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .watermelon-slider::-webkit-slider-thumb {
   background: url('svg/watermelon.svg');
-  width: 32px;
-  height: 32px;
   transform: rotate(20deg);
+}
+
+.figma-slider::-webkit-slider-thumb {
+  background: url('svg/figma.svg');
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-
 
 @keyframes backgroundGradient {
     0%{background-position:0% 13%}

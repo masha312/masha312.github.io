@@ -18,12 +18,15 @@ body {
   animation: backgroundGradient 10s ease infinite;
 }
 h3 {
-  padding: 24px;
+  padding: 20px;
   padding-bottom: 8px;
   padding-top: 32px;
   color: #595959;
   font-size: 24px;
   cursor: default;
+}
+h3 .emoji {
+  font-size: 18px;
 }
 p {
   font-size: 10px;
@@ -94,19 +97,8 @@ a:hover {
 .slider:hover {
   background: #0000001c;
 }
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 32px;
-  height: 32px;
-  background: blue;
-  cursor: pointer;
-  outline: none !important;
-}
 .avocado-slider::-webkit-slider-thumb {
   background: url('svg/avocado.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .loopie-slider::-webkit-slider-thumb {
   background: url('svg/loopie.svg');
@@ -115,30 +107,30 @@ a:hover {
 }
 .squiggly-slider::-webkit-slider-thumb {
   background: url('svg/squiggly.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .confetto-slider::-webkit-slider-thumb {
   background: url('svg/confetto.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .egg-slider::-webkit-slider-thumb {
   background: url('svg/egg.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .star-slider::-webkit-slider-thumb {
   background: url('svg/star.svg');
   transform: rotate(90deg);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .watermelon-slider::-webkit-slider-thumb {
   background: url('svg/watermelon.svg');
-  width: 32px;
-  height: 32px;
   transform: rotate(20deg);
+}
+.figma-slider::-webkit-slider-thumb {
+  background: url('svg/figma.svg');
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
   background-repeat: no-repeat;
   background-size: contain;
 }
