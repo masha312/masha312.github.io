@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Literata:wght@562&display=swap');
 
+@gray: #595959;
+@gray-light: #d2d2d2;
+@blue: #e2f9ff;
+@pink: #ffddf9;
+@white: #f8f8f8;
+
 body {
   font-family: 'Literata', serif;
-  background: linear-gradient(275deg, #e2f9ff, #ffddf9);
+  background: linear-gradient(275deg, @blue, @pink);
   animation: backgroundGradient 10s ease infinite;
 }
 
@@ -10,7 +16,7 @@ h3 {
   padding: 24px;
   padding-bottom: 8px;
   padding-top: 32px;
-  color: #595959;
+  color: @gray;
   font-size: 24px;
   cursor: default;
 }
@@ -19,19 +25,19 @@ p {
   font-size: 10px;
   text-align: right;
   padding-right: 16px;
-  color: #d2d2d2;
+  color: @gray-light;
   letter-spacing: 1px;
   margin-bottom: 24px;
   cursor: default;
 }
 
 a {
-  color: #d2d2d2;
+  color: @gray-light;
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
-  color: #595959;
+  color: @gray;
   text-decoration: none;
   }
 }
@@ -57,7 +63,7 @@ a {
   z-index: 2;
   width: 90vw;
   max-width: 400px;
-  background-color: #f8f8f8;
+  background-color: @white;
   border-radius: 2px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
   display: flex;
