@@ -7,7 +7,7 @@
 
 html body {
   background-color: @beige;
-  margin-top: 120px;
+  margin-top: 20vh;
   cursor: default;
 }
 
@@ -69,7 +69,7 @@ header {
 
     a {
       color: @gray;
-      border-bottom: 2px solid fade(@brown, 40%);
+      border-bottom: 1px solid fade(@brown, 40%);
       padding: 0px 2px;
       transition-duration: 0.3s;
 
@@ -80,8 +80,10 @@ header {
       }
     }
 
-    .link-to-blog, .link-to-home {
-      margin-top: 48px;
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      margin-top: 32px;
     }
 
     .image-link {
@@ -101,6 +103,11 @@ header {
       padding: 6px 12px;
       background-color: fade(@brown, 20%);
       border-radius: 4px;
+      margin: 0px 4px;
+    }
+
+    .article-list {
+      margin-bottom: 32px;
     }
 
     .blog-header {

@@ -14,7 +14,7 @@
 }
 html body {
   background-color: #EFE8D4;
-  margin-top: 120px;
+  margin-top: 20vh;
   cursor: default;
 }
 header {
@@ -68,7 +68,7 @@ header {
 }
 .container a {
   color: #2C2C2C;
-  border-bottom: 2px solid rgba(158, 114, 63, 0.4);
+  border-bottom: 1px solid rgba(158, 114, 63, 0.4);
   padding: 0px 2px;
   transition-duration: 0.3s;
 }
@@ -77,9 +77,10 @@ header {
   color: inherit;
   background-color: rgba(158, 114, 63, 0.2);
 }
-.container .link-to-blog,
-.container .link-to-home {
-  margin-top: 48px;
+.container .navigation {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
 }
 .container .image-link {
   border-bottom: none;
@@ -95,6 +96,10 @@ header {
   padding: 6px 12px;
   background-color: rgba(158, 114, 63, 0.2);
   border-radius: 4px;
+  margin: 0px 4px;
+}
+.container .article-list {
+  margin-bottom: 32px;
 }
 .container .blog-header {
   margin-top: 24px;
