@@ -29,7 +29,7 @@ const getActivity = () => {
   document.body.appendChild(line)
 
   fetch(
-  `http://www.boredapi.com/api/activity`
+  `https://www.boredapi.com/api/activity`
 )
   .then(response => {
     // Convert to JSON
