@@ -5,7 +5,7 @@ generateElements = (numOfElements, className, isSvg) => {
     div.setAttribute('class', `${className} element`);
 
     if (isSvg) {
-      div.style.content = `url(svg/${className}.svg)`;
+      div.style.content = `url(../svg/${className}.svg)`;
     } else {
       assignSkew(div);
       assignSize(div);

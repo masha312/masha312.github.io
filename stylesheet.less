@@ -131,6 +131,27 @@ header {
     }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translate(0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
 // Code blocks
 .code-block {
   padding: 8px 12px;
