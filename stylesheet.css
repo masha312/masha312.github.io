@@ -16,6 +16,7 @@ html body {
   background-color: #EFE8D4;
   margin-top: 20vh;
   cursor: default;
+  font-size: 18px;
 }
 header {
   margin-bottom: 40px;
@@ -27,55 +28,58 @@ header {
 }
 .container h1,
 .container h2 {
-  color: #9E723F;
+  color: #784b31;
   font-size: inherit;
 }
 .container h1 {
-  font-size: 24px;
+  font-size: 1.75em;
 }
 .container h3 {
-  font-size: 20px;
-  margin-top: 40px;
-  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 2em;
   margin-bottom: 16px;
 }
 .container h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 32px;
+  font-size: 1.25em;
+  margin-top: 1.5em;
 }
 .container h4,
 .container p {
   line-height: 1.6;
 }
-.container h5 {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  color: #595959;
-  letter-spacing: 2px;
-  margin-top: 56px;
-  opacity: 0.6;
+.container p {
+  font-size: 1em;
 }
 .container .caption {
-  font-size: 14px;
-  color: #9E723F;
+  font-size: 0.75em;
+  color: #784b31;
   text-align: center;
   margin-top: 8px;
 }
 .container .caption a {
-  color: #9E723F;
+  color: #784b31;
 }
 .container a {
   color: #2C2C2C;
-  border-bottom: 1px solid rgba(158, 114, 63, 0.4);
+  border-bottom: 1px solid rgba(120, 75, 49, 0.4);
   padding: 0px 2px;
   transition-duration: 0.3s;
 }
 .container a:hover {
   text-decoration: none;
   color: inherit;
-  background-color: rgba(158, 114, 63, 0.2);
+  background-color: rgba(120, 75, 49, 0.2);
+}
+.container ul {
+  line-height: 2;
+  list-style: none;
+}
+.container ul li::before {
+  content: "\2022";
+  color: #784b31;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 .container .navigation {
   display: flex;
@@ -94,7 +98,7 @@ header {
 .container .nav-links {
   border-bottom: none;
   padding: 6px 12px;
-  background-color: rgba(158, 114, 63, 0.2);
+  background-color: rgba(120, 75, 49, 0.2);
   border-radius: 4px;
   margin: 0px 4px;
 }
@@ -112,7 +116,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 32px 0px;
+  margin: 24px 0px;
 }
 .container .disabled {
   opacity: 0.3;
@@ -139,7 +143,7 @@ header {
 .code-block {
   padding: 8px 12px;
   border-radius: 3px;
-  background-color: rgba(158, 114, 63, 0.1);
+  background-color: rgba(120, 75, 49, 0.1);
 }
 .photo-gallery {
   margin-top: 0px;
