@@ -1,0 +1,95 @@
+:root {
+  --blue: #c6eaff;
+}
+
+#map {
+  height: 80vh;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+}
+
+form {
+  margin: 0;
+}
+
+button {
+  border: none;
+  height: 40px;
+  outline: none;
+  background-color: var(--blue);
+  border-radius: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 8px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.form-container {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* custom select */
+/*the container must be positioned relative:*/
+.weekday-dropdown {
+  position: relative;
+  font-family: Arial;
+}
+
+.weekday-dropdown select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: var(--blue);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  padding: 8px 16px;
+  border: none;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: var(--blue);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
