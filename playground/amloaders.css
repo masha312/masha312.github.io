@@ -35,14 +35,13 @@ body {
 }
 
 #line {
-  /*animation-name: fadeInOut;
+  animation-name: fadeInOut;
   animation-duration: 7s;
   animation-fill-mode: forwards;
   position: absolute;
   margin-top: 50vh;
   margin-left: 50vw;
-  transform: translateY(-50%) translateX(-50%);*/
-  opacity: 0;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 
@@ -86,12 +85,12 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /*opacity: 0;
+  opacity: 0;
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-delay: 7s;
-  animation-play-state: paused;*/
+  animation-play-state: paused;
 }
 
 nav ul li a {
@@ -116,12 +115,12 @@ nav ul li a.current {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  /*opacity: 0;
+  opacity: 0;
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-delay: 7s;
-  animation-play-state: paused; */
+  animation-play-state: paused;
 }
 
 .loader-container {

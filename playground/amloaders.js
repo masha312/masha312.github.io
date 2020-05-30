@@ -1,5 +1,5 @@
 
-/* LOGO
+/* LOGO */
 const intro = () => {
   const linePath = document.querySelector("#line path")
   // figures out how long the path is
@@ -27,7 +27,6 @@ const intro = () => {
 }
 
 intro();
-*/
 
 /* NAVIGATION */
 const navigation = document.querySelector("ul");
