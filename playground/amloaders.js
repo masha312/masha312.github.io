@@ -74,8 +74,11 @@ function onScroll(event){
 }
 
 /* LOADERS */
-const loaders = document.querySelector(".loader");
-loaders.style.animationPlayState = 'running';
+const loaders = document.querySelectorAll(".loader");
+for (var i = 0; i < loaders.length; i++) {
+  loaders[i].style.animationPlayState = 'running';
+}
+
 
 /* LOADER 1 */
 const loader1 = document.querySelector(".loader-2-text");
