@@ -29,7 +29,7 @@ function setMapOnAll(map) {
 }
 
 const getStreets = (day) => {
-  fetch('streets.json')
+  fetch('streets3.json')
     .then(response => {
       //Convert the response to JSON
       return response.json();
@@ -49,7 +49,7 @@ const getStreets = (day) => {
       }
     }
   } );
-} 
+}
 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "weekday-dropdown":*/

@@ -40,7 +40,7 @@
 }
 
 .marquee div {
-  animation: moveLeft 200s infinite alternate;
+  animation: moveLeft 200s infinite alternate linear;
   /* text stays on the same line */
   white-space: nowrap;
   display: block;

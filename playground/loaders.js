@@ -180,27 +180,3 @@ function onScroll(event){
         }
     });
 }
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-     // get all the links with an ID that starts with 'loader'
-     const listOfLinks = document.querySelectorAll("a[href^='#loader");
-     // loop over all the links
-     listOfLinks.forEach(function (link) {
-       // listen for a click
-       link.addEventListener('click',  () => {
-         // toggle highlight on and off when we click a link
-         listOfLinks.forEach( (link) => {
-           if (link.classList.contains('current')) {
-             link.classList.remove('current');
-           }
-         });
-         link.classList.add('current');
-         // get the element where to scroll
-         let ref = link.href.split('#loader');
-         ref = "#loader" + ref[1];
-
-       })
-       })
-     })
-*/
