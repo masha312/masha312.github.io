@@ -319,15 +319,12 @@ nav ul li a.current {
 
 @keyframes reveal {
   0% {
-    opacity: 0.3;
+    opacity: 0;
   }
-  15% {
+  25% {
     opacity: 1;
   }
   50% {
-    opacity: 1;
-  }
-  57% {
     opacity: 0.3;
   }
   65% {
@@ -344,12 +341,15 @@ nav ul li a.current {
   place-items: center;
 }
 
+
+
 .loader-4-day {
   grid-area: 1/1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .loader-4-night {
@@ -393,7 +393,9 @@ nav ul li a.current {
   border-radius: 100%;
   height: 112px;
   width: 112px;
+  opacity: 1;
   background: linear-gradient(180deg, #30D2FF 44.5%, #3DEB5A 76%);
+  z-index: 1;
 }
 
 .loader-5-night {
@@ -422,6 +424,8 @@ nav ul li a.current {
 }
 
 .loader-5-sun {
+  opacity: 0;
   grid-area: 1/1;
-  animation: reveal 6s infinite linear reverse;
+  animation: reveal 6s infinite linear;
+  animation-delay: 3s;
 }
