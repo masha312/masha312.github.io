@@ -309,8 +309,32 @@ nav ul li a.current {
   0% {
     transform: rotate(0deg);
   }
+  50% {
+    transform: rotate(180deg);
+  }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0.3;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0.3;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -355,4 +379,49 @@ nav ul li a.current {
   grid-area: 1/1;
   z-index: 1;
   animation: showMoon 4s infinite linear;
+}
+
+/* LOADER 5 */
+
+.loader-container-5 {
+  display: grid;
+  place-items: center;
+}
+
+.loader-5-day {
+  grid-area: 1/1;
+  border-radius: 100%;
+  height: 112px;
+  width: 112px;
+  background: linear-gradient(180deg, #30D2FF 44.5%, #3DEB5A 76%);
+}
+
+.loader-5-night {
+  grid-area: 1/1;
+  height: 112px;
+  width: 112px;
+  background-color: #1f3e63;
+  animation: createNight 3s infinite alternate linear;
+  z-index: 3;
+  border-radius: 100%;
+}
+
+.loader-5-circles {
+  grid-area: 1/1;
+  animation: showMoon 6s infinite linear;
+  height: 112px;
+  width: 112px;
+  display: grid;
+  place-items: center;
+  z-index: 5;
+}
+
+.loader-5-moon {
+  grid-area: 1/1;
+  animation: reveal 6s infinite linear;
+}
+
+.loader-5-sun {
+  grid-area: 1/1;
+  animation: reveal 6s infinite linear reverse;
 }
