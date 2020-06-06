@@ -26,7 +26,7 @@ const intro = () => {
   })
 }
 
-// intro(); // commentout
+intro(); // commentout
 
 /* NAVIGATION */
 const navigation = document.querySelector("ul");

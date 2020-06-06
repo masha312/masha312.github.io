@@ -89,7 +89,7 @@ nav ul {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  /* animation-delay: 5s; /* comment out */
+  animation-delay: 5s; /* comment out */
   animation-play-state: paused;
 }
 
@@ -119,7 +119,7 @@ nav ul li a.current {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  /* animation-delay: 5s; commentout */
+  animation-delay: 5s; commentout */
   animation-play-state: paused;
 }
 
