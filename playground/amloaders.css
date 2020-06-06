@@ -86,7 +86,7 @@ nav ul {
   flex-direction: column;
   justify-content: space-around;
   opacity: 0;
-  animation-name: fadeIn;
+  animation-name: fadeIn; /* comment out */
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-delay: 5s;
@@ -119,7 +119,7 @@ nav ul li a.current {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  animation-delay: 5s;
+  animation-delay: 5s; /* commentout */
   animation-play-state: paused;
 }
 
@@ -379,4 +379,81 @@ nav ul li a.current {
   grid-area: 1/1;
   animation: reveal 6s infinite linear;
   animation-delay: 3s;
+}
+
+/* LOADER 5 */
+
+@keyframes rockSeesaw {
+  0% {
+    transform: rotate(-30deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+.loader-container-5 {
+  height: 100vh;
+  width: 100vh;
+}
+
+
+.loader-5-seesaw {
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.loader-5-beem {
+  grid-area: 1/1;
+  margin-bottom: 40px;
+}
+
+.loader-5-wedge {
+  grid-area: 1/1;
+  margin-top: 32px;
+}
+
+.loader-5-beem svg {
+  transform-origin: center;
+  overflow: visible;
+}
+
+.loader-5-beem svg {
+  transform-origin: center;
+  animation: rockSeesaw 2s infinite alternate ease-in-out;
+}
+
+.loader-5-men {
+  grid-area: 1/1;
+}
+
+@keyframes switchLegs {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.straight-leg1 {
+  opacity: 0;
+  animation: switchLegs 2s linear infinite alternate;
+}
+
+.bent-leg1 {
+  animation: switchLegs 2s linear infinite alternate;
+  animation-delay: 2s;
+}
+
+.straight-leg2 {
+  animation: switchLegs 2s linear infinite alternate;
+  animation-delay: 2s;
+}
+
+.bent-leg2 {
+  opacity: 0;
+  animation: switchLegs 2s linear infinite alternate;
 }
