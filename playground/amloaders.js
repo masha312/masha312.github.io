@@ -26,7 +26,7 @@ const intro = () => {
   })
 }
 
-intro(); // commentout
+// intro(); // commentout
 
 /* NAVIGATION */
 const navigation = document.querySelector("ul");
@@ -80,8 +80,8 @@ for (var i = 0; i < loaders.length; i++) {
 }
 
 
-/* LOADER 1 */
-const loader1 = document.querySelector(".loader-2-text");
-const loader1Text = loader1.innerText;
-const loader1TextRepeated = new Array(100).fill(loader1Text).join(' ');
-loader1.innerHTML = loader1TextRepeated;
+/* LOADER 2 */
+const loader2 = document.querySelector(".loader-2-text");
+const loader2Text = loader2.innerText;
+const loader2TextRepeated = new Array(100).fill(loader2Text).join(' ');
+loader2.innerHTML = loader2TextRepeated;

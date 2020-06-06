@@ -86,10 +86,10 @@ nav ul {
   flex-direction: column;
   justify-content: space-around;
   opacity: 0;
-  animation-name: fadeIn; /* comment out */
+  animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  animation-delay: 5s;
+  /* animation-delay: 5s; /* comment out */
   animation-play-state: paused;
 }
 
@@ -119,7 +119,7 @@ nav ul li a.current {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  animation-delay: 5s; /* commentout */
+  /* animation-delay: 5s; commentout */
   animation-play-state: paused;
 }
 
@@ -128,6 +128,9 @@ nav ul li a.current {
   width: 400px;
   height: 400px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* LOADER 1 */
@@ -456,4 +459,43 @@ nav ul li a.current {
 .bent-leg2 {
   opacity: 0;
   animation: switchLegs 2s linear infinite alternate;
+}
+
+/* LOADER 6 */
+@keyframes rotateThing {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateThing2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+.loader-6-first {
+  transform-origin: top;
+  animation: rotateThing 1500ms infinite alternate linear;*/
+}
+
+.loader-6-last {
+  transform-origin: top;
+  animation: rotateThing2 1500ms infinite alternate linear;*/
+}
+
+.loader-6-things {
+  display: flex;
 }
