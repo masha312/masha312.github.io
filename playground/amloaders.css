@@ -464,7 +464,7 @@ nav ul li a.current {
 /* LOADER 6 */
 @keyframes rotateThing {
   0% {
-    transform: rotate(30deg);
+    transform: rotate(20deg);
   }
   50% {
     transform: rotate(0deg);
@@ -482,18 +482,18 @@ nav ul li a.current {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-30deg);
+    transform: rotate(-20deg);
   }
 }
 
 .loader-6-first {
   transform-origin: top;
-  animation: rotateThing 1500ms infinite alternate linear;*/
+  animation: rotateThing 1500ms infinite alternate ease-in-out;
 }
 
 .loader-6-last {
   transform-origin: top;
-  animation: rotateThing2 1500ms infinite alternate linear;*/
+  animation: rotateThing2 1500ms infinite alternate ease-in-out;
 }
 
 .loader-6-things {
