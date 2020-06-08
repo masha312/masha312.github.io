@@ -464,7 +464,7 @@ nav ul li a.current {
 /* LOADER 6 */
 @keyframes rotateThing {
   0% {
-    transform: rotate(20deg);
+    transform: rotate(15deg);
   }
   50% {
     transform: rotate(0deg);
@@ -482,20 +482,101 @@ nav ul li a.current {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
   }
 }
 
 .loader-6-first {
   transform-origin: top;
-  animation: rotateThing 1500ms infinite alternate ease-in-out;
+  animation: rotateThing 1400ms infinite alternate linear;
 }
 
 .loader-6-last {
   transform-origin: top;
-  animation: rotateThing2 1500ms infinite alternate ease-in-out;
+  animation: rotateThing2 1400ms infinite alternate ease-in-out;
 }
 
 .loader-6-things {
   display: flex;
+}
+
+/* LOADER 7 */
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-7-circle {
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    animation: rotateCircle 3s infinite ease-in-out;
+}
+
+.loader-7-circle-middle {
+    height: 42px;
+    width: 42px;
+    align-items: flex-end;
+    transform-origin: bottom;
+}
+
+.loader-7-circle-big {
+    height: 88px;
+    width: 88px;
+    animation-timing-function: linear;
+}
+
+.loader-7-circle-small {
+    height: 20px;
+    width: 20px;
+    transform-origin: bottom;
+}
+
+/* LOADER 8 */
+@keyframes rotateGrape {
+  0% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes rotateBanana {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container-8 {
+  display: grid;
+  place-items: center;
+}
+
+.loader-8-grape {
+  grid-area: 1/1;
+  margin-bottom: 32px;
+  animation: rotateGrape 2s infinite alternate ease-in-out;
+}
+
+.loader-8-banana {
+  grid-area: 1/1;
+  margin-top: 32px;
+  transform-origin: top;
+  animation: rotateBanana 2s infinite alternate ease-in-out;
+}
+
+/* LOADER 9 */
+
+.loader-9-rainbow-1, .loader-9-rainbow-2 {
+  transform-origin: center;
 }

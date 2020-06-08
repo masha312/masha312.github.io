@@ -85,3 +85,20 @@ const loader2 = document.querySelector(".loader-2-text");
 const loader2Text = loader2.innerText;
 const loader2TextRepeated = new Array(100).fill(loader2Text).join(' ');
 loader2.innerHTML = loader2TextRepeated;
+
+/* LOADER 9 */
+anime({
+  targets: ".loader-9-rainbow-1",
+  rotate: 360,
+  duration: 2800,
+  loop: true,
+  easing: 'linear',
+})
+
+anime({
+  targets: ".loader-9-rainbow-2",
+  rotate: -360,
+  duration: 1800,
+  loop: true,
+  easing: 'linear',
+})
