@@ -327,7 +327,7 @@ nav ul li a.current {
     opacity: 1;
   }
   50% {
-    opacity: 0.3;
+    opacity: 1;
   }
   65% {
     opacity: 0;
