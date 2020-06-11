@@ -102,3 +102,97 @@ anime({
   loop: true,
   easing: 'linear',
 })
+
+/* LOADER 10 */
+var tl10 = anime.timeline({
+  delay: function(el, i) { return i * 1000 },
+  duration: 600,
+  easing: 'easeOutQuint',
+  loop: true
+});
+
+tl10
+.add({
+  targets: '.loader-10-column-2',
+  translateY: 14
+})
+.add({
+  targets: '.loader-10-column-1',
+  translateX: 56,
+})
+.add({
+  targets: ['.loader-10-column-2', '.loader-10-column-1'],
+  translateY: function (el, i) {
+    return -14 * (i - 2)
+  },
+  translateX: function(el, i) {
+    return 56 * i;
+  },
+  delay: 0
+})
+.add({
+  targets: '.loader-10-column-3 .loader-10-bar',
+  translateX: -56,
+});
+
+/* LOADER 11 */
+anime({
+  targets: '#demo-svg polygon',
+  points: [
+    {value: '32 32, 208 32, 208 208, 32 208'},
+    {value: '120 32, 208 208, 120 208, 32 208'}
+  ],
+  easing:'easeOutSine',
+  duration: 2400,
+  loop:true,
+  direction: 'alternate'
+})
+
+var path1 = anime.path('.path-1');
+
+anime({
+  targets: '.circle-1',
+  translateX: path1('x'),
+  translateY: path1('y'),
+  rotate: path1('angle'),
+  easing: 'linear',
+  duration: 2000,
+  loop: true
+});
+
+
+var path2 = anime.path('.path-2');
+
+anime({
+  targets: '.circle-2',
+  translateX: path2('x'),
+  translateY: path2('y'),
+  rotate: path2('angle'),
+  easing: 'linear',
+  duration: 2000,
+  loop: true
+});
+
+var path3 = anime.path('.path-3');
+
+anime({
+  targets: '.circle-3',
+  translateX: path3('x'),
+  translateY: path3('y'),
+  rotate: path3('angle'),
+  easing: 'linear',
+  duration: 2000,
+  loop: true
+});
+
+var path4 = anime.path('.path-4');
+
+anime({
+  targets: '.circle-4',
+  translateX: path4('x'),
+  translateY: path4('y'),
+  rotate: path4('angle'),
+  easing: 'linear',
+  duration: 2000,
+  loop: true
+});
