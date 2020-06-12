@@ -457,22 +457,16 @@ nav ul li a.current {
 }
 
 /* LOADER 6 */
-@keyframes rotateThing {
+@keyframes rotateFirst {
   0% {
     transform: rotate(15deg);
   }
   50% {
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
-@keyframes rotateThing2 {
-  0% {
-    transform: rotate(0deg);
-  }
+@keyframes rotateLast {
   50% {
     transform: rotate(0deg);
   }
@@ -483,12 +477,12 @@ nav ul li a.current {
 
 .loader-6-first {
   transform-origin: top;
-  animation: rotateThing 1400ms infinite alternate ease-in-out;
+  animation: rotateFirst 1s infinite alternate ease-in;
 }
 
 .loader-6-last {
   transform-origin: top;
-  animation: rotateThing2 1400ms infinite alternate ease-in-out;
+  animation: rotateLast 1s infinite alternate ease-out;*/
 }
 
 .loader-6-things {

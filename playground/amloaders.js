@@ -1,7 +1,7 @@
 
 /* LOGO */
 const intro = () => {
-  const linePath = document.querySelector("#line path")
+  const linePath = document.querySelector("#line .m")
   // figures out how long the path is
   const lineOffset1 = anime.setDashoffset(linePath)
   // set back to our element
@@ -13,7 +13,7 @@ const intro = () => {
     easing: 'easeInOutSine'
   })
 
-  const lineLine = document.querySelector("#line line")
+  const lineLine = document.querySelector("#line .line")
   // figures out how long the path is
   const lineOffset2 = anime.setDashoffset(lineLine)
 
