@@ -599,11 +599,6 @@ nav ul li a.current {
 }
 
 /* LOADER 11 */
-.loader-container-11 {
-  display: grid;
-  place-items: center;
-}
-
-.loader-11-circles, .loader-11-paths {
-  grid-area: 1/1;
+.loader-container-11 svg {
+  overflow: visible;
 }

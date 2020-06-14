@@ -137,62 +137,203 @@ tl10
 
 /* LOADER 11 */
 anime({
-  targets: '#demo-svg polygon',
-  points: [
-    {value: '32 32, 208 32, 208 208, 32 208'},
-    {value: '120 32, 208 208, 120 208, 32 208'}
-  ],
-  easing:'easeOutSine',
-  duration: 2400,
-  loop:true,
-  direction: 'alternate'
-})
-
-var path1 = anime.path('.path-1');
-
-anime({
   targets: '.circle-1',
-  translateX: path1('x'),
-  translateY: path1('y'),
-  rotate: path1('angle'),
-  easing: 'linear',
-  duration: 2000,
+  translateX: [
+    { value: 49, duration: 800, delay: 500 },
+    { value: 63, duration: 800, delay: 500 },
+    { value: 24, duration: 800, delay: 500 },
+    { value: 64, duration: 800, delay: 500 },
+    { value: 42, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    { value: 35, duration: 800, delay: 500 },
+    { value: -8, duration: 800, delay: 500 },
+    { value: -23, duration: 800, delay: 500 },
+    { value: 23, duration: 800, delay: 500 },
+    { value: 7, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
   loop: true
-});
-
-
-var path2 = anime.path('.path-2');
+})
 
 anime({
   targets: '.circle-2',
-  translateX: path2('x'),
-  translateY: path2('y'),
-  rotate: path2('angle'),
-  easing: 'linear',
-  duration: 2000,
+  translateX: [
+    { value: 70, duration: 800, delay: 500 },
+    { value: 35, duration: 800, delay: 500 },
+    { value: 60, duration: 800, delay: 500 },
+    { value: 5, duration: 800, delay: 500 },
+    { value: 32, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    { value: 0, duration: 800, delay: 500 },
+    { value: -35, duration: 800, delay: 500 },
+    { value: 25, duration: 800, delay: 500 },
+    { value: 0, duration: 800, delay: 500 },
+    { value: 7, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
   loop: true
-});
-
-var path3 = anime.path('.path-3');
+})
 
 anime({
   targets: '.circle-3',
-  translateX: path3('x'),
-  translateY: path3('y'),
-  rotate: path3('angle'),
-  easing: 'linear',
-  duration: 2000,
+  translateX: [
+    { value: 56, duration: 800, delay: 500 },
+    { value: 7, duration: 800, delay: 500 },
+    { value: 21, duration: 800, delay: 500 },
+    { value: 4, duration: 800, delay: 500 },
+    { value: 24, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    {value: 35, duration: 800, delay: 500 },
+    {value: -8, duration: 800, delay: 500 },
+    { value: 36, duration: 800, delay: 500 },
+    { value: -26, duration: 800, delay: 500 },
+    { value: 13, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
   loop: true
-});
-
-var path4 = anime.path('.path-4');
+})
 
 anime({
   targets: '.circle-4',
-  translateX: path4('x'),
-  translateY: path4('y'),
-  rotate: path4('angle'),
-  easing: 'linear',
-  duration: 2000,
+  translateX: [
+    { value: -28, duration: 800, delay: 500 },
+    { value: 33, duration: 800, delay: 500 },
+    { value: -18, duration: 800, delay: 500 },
+    { value: 30, duration: 800, delay: 500 },
+    { value: 4, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    {value: 35, duration: 800, delay: 500 },
+    {value: 13, duration: 800, delay: 500 },
+    { value: 25, duration: 800, delay: 500 },
+    { value: -20, duration: 800, delay: 500 },
+    { value: 1, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
   loop: true
-});
+})
+
+anime({
+  targets: '.circle-5',
+  translateX: [
+    { value: 28, duration: 800, delay: 500 },
+    { value: -32, duration: 800, delay: 500 },
+    { value: 28, duration: 800, delay: 500 },
+    { value: -54, duration: 800, delay: 500 },
+    { value: -1, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    {value: -35, duration: 800, delay: 500 },
+    {value: 13, duration: 800, delay: 500 },
+    { value: 1, duration: 800, delay: 500 },
+    { value: -51, duration: 800, delay: 500 },
+    { value: 7, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
+  loop: true
+})
+
+anime({
+  targets: '.circle-6',
+  translateX: [
+    { value: -21, duration: 800, delay: 500 },
+    { value: -56, duration: 800, delay: 500 },
+    { value: 4, duration: 800, delay: 500 },
+    { value: -71, duration: 800, delay: 500 },
+    { value: -18, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    {value: -35, duration: 800, delay: 500 },
+    {value: 35, duration: 800, delay: 500 },
+    { value: -23, duration: 800, delay: 500 },
+    { value: 47, duration: 800, delay: 500 },
+    { value: 4, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
+  loop: true
+})
+
+anime({
+  targets: '.circle-7',
+  translateX: [
+    { value: -70, duration: 800, delay: 500 },
+    { value: 0, duration: 800, delay: 500 },
+    { value: -35, duration: 800, delay: 500 },
+    { value: 2, duration: 800, delay: 500 },
+    { value: -41, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    {value: 0, duration: 800, delay: 500 },
+    {value: 35, duration: 800, delay: 500 },
+    { value: -34, duration: 800, delay: 500 },
+    { value: -40, duration: 800, delay: 500 },
+    { value: 16, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
+  loop: true
+})
+
+anime({
+  targets: '.circle-8',
+  translateX: [
+    { value: -84, duration: 800, delay: 500 },
+    { value: -49, duration: 800, delay: 500 },
+    { value: -84, duration: 800, delay: 500 },
+    { value: -6, duration: 800, delay: 500 },
+    { value: -49, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  translateY: [
+    {value: -35, duration: 800, delay: 500 },
+    {value: 35, duration: 800, delay: 500 },
+    { value: 1, duration: 800, delay: 500 },
+    { value: 30, duration: 800, delay: 500 },
+    { value: 10, duration: 600, delay: 200, easing: "easeInBack" },
+    {value: 0, duration: 500, delay: 1000 }
+  ],
+  easing: "easeInOutSine",
+  duration: 800,
+  offset: 0,
+  loop: true
+})
+
+anime({
+  targets: '.circle',
+  opacity: [
+    { value: 0, duration: 800, delay: 5200},
+    { value: 1, duration: 500, delay: 1000}
+  ],
+  easing: "easeInBack",
+  loop: true
+})
