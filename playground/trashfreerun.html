@@ -1,0 +1,46 @@
+<html>
+  <head>
+      <!-- little changes make big differences -->
+      <title>Run free!</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="trashfreerun.css">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117363434-4"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'UA-117363434-4');
+      </script>
+  </head>
+  <body>
+    <div id="bodyContainer" class="body-container">
+      <form class="form weekday-selector">
+      		<input onclick="showStreets()" type="radio" id="radio-one" name="choice" value="M"/>
+      		<label for="radio-one">M</label>
+      		<input onclick="showStreets()" type="radio" id="radio-two" name="choice" value="T" />
+      		<label for="radio-two">T</label>
+      		<input onclick="showStreets()" type="radio" id="radio-three" name="choice" value="W" />
+      		<label for="radio-three">W</label>
+      		<input onclick="showStreets()" type="radio" id="radio-four" name="choice" value="TH" />
+      		<label for="radio-four">Th</label>
+      		<input onclick="showStreets()" type="radio" id="radio-five" name="choice" value="F" />
+      		<label for="radio-five">F</label>
+      </form>
+      <div id="map"></div>
+    </div>
+    <div class="loader">
+      <div class="loader-7-circle loader-7-circle-big">
+        <div class="loader-7-circle loader-7-circle-middle">
+          <div class="loader-7-circle loader-7-circle-small"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZHs3mrTklD3LOdY1R3A7i1R8XjMDw8IM&callback=initMap"></script>
+<script src="trashfreerun.js"></script>
