@@ -105,6 +105,12 @@ header {
 .container .article-list {
   margin-bottom: 32px;
 }
+.container .article-list div {
+  display: flex;
+}
+.container .playground-line {
+  margin: 20px 0px;
+}
 .container .blog-header {
   margin-top: 24px;
   margin-bottom: 24px;
@@ -139,6 +145,11 @@ header {
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-play-state: paused;
+}
+.emoj {
+  text-align: center;
+  width: 24px;
+  margin-right: 8px;
 }
 .code-block {
   padding: 8px 12px;
