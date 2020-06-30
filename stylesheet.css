@@ -3,23 +3,28 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lora/v16/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787z5vBJBkqg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lora/v16/0QI6MX1D_JOuGQbT0gvTJPa787z5vBJBkqg.ttf) format('truetype');
 }
 html body {
-  background-color: #EFE8D4;
+  background-color: #f4f0e2;
   margin-top: 20vh;
   cursor: default;
   font-size: 16px;
 }
 header {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .container {
   font-family: 'Lora', serif;
@@ -95,13 +100,6 @@ header {
 .container .top-menu {
   margin-bottom: 40px;
 }
-.container .nav-links {
-  border-bottom: none;
-  padding: 6px 12px;
-  background-color: rgba(120, 75, 49, 0.2);
-  border-radius: 4px;
-  margin: 0px 4px;
-}
 .container .article-list {
   margin-bottom: 32px;
 }
@@ -111,9 +109,20 @@ header {
 .container .playground-line {
   margin: 20px 0px;
 }
-.container .blog-header {
+.container .secondary-header {
   margin-top: 24px;
   margin-bottom: 24px;
+  justify-content: flex-start;
+}
+.container .secondary-header nav {
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+.container .secondary-header nav .arrow-nav-link {
+  border-bottom: none;
+  padding: 0px 4px;
+  border-radius: 1px;
+  padding-bottom: 1px;
 }
 .container .col-md-7 {
   padding-left: 0px;
@@ -127,13 +136,22 @@ header {
 .container .disabled {
   opacity: 0.3;
 }
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav .nav-link {
+  margin-right: 4px;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateX(5px);
   }
   50% {
-    transform: translate(0px);
+    transform: translateX(0px);
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -150,6 +168,9 @@ header {
   text-align: center;
   width: 24px;
   margin-right: 8px;
+}
+.lm {
+  color: #083466;
 }
 .code-block {
   padding: 8px 12px;
@@ -176,5 +197,14 @@ header {
 @media (max-width: 767.98px) {
   .photo-column {
     flex: 100%;
+  }
+}
+@media (max-width: 490px) {
+  .primary-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .primary-header nav {
+    margin-bottom: 6vh;
   }
 }
