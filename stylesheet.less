@@ -160,8 +160,8 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
 
-  .nav-link {
-    margin-right: 4px;
+  .nav-link:not(:last-child) {
+    margin-right: 12px;
   }
 }
 
@@ -191,10 +191,6 @@ nav {
   text-align: center;
   width: 24px;
   margin-right: 8px;
-}
-
-.lm {
-  color: @navy;
 }
 
 // Code blocks

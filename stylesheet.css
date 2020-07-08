@@ -141,8 +141,8 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
 }
-nav .nav-link {
-  margin-right: 4px;
+nav .nav-link:not(:last-child) {
+  margin-right: 12px;
 }
 @keyframes fadeIn {
   0% {
@@ -168,9 +168,6 @@ nav .nav-link {
   text-align: center;
   width: 24px;
   margin-right: 8px;
-}
-.lm {
-  color: #083466;
 }
 .code-block {
   padding: 8px 12px;
