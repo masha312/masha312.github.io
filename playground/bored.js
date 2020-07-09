@@ -52,17 +52,17 @@ const duplicateHTML = (element, quantity) => {
   element.innerHTML = elementsArray;
 }
 
-duplicateHTML(document.querySelector(".particles"), 20);
+/* duplicateHTML(document.querySelector(".particles"), 20);
 
 const particles = document.querySelectorAll('.particle');
 particles.forEach(particle => {
   assignBoxShadow(particle);
   assignPosition(particle);
   assignSize(particle);
-  /*getAnimationDelay(particle);*/
+  /*getAnimationDelay(particle);
   getAnimationDuration(particle);
   getTransformOrigin(particle);
-})
+}) */
 
 function getAnimationDuration(element) {
   const animationDuration = random(6000, 10000);

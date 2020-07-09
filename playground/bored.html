@@ -4,9 +4,10 @@
     <title>u bored?</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="./eyes.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./bored.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bored.css" rel="stylesheet" media="screen">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117363434-4"></script>
     <script>
@@ -17,10 +18,10 @@
     </script>
 </head>
 <body>
-  <button id="bored-btn" onclick="getActivity()">gimme something</button>
-  <div class="particles"><span class="particle"></span></div>
+  <button id="bored-btn" onclick="getActivity()" class="btn btn-large" type="button">give me something</button>
 </body>
 </html>
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="bored.js"></script>
