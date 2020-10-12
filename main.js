@@ -4,3 +4,8 @@ lines.forEach((line, index) => {
     const delay = index * 200;
     line.style.animationDelay = `${delay}ms`;
 })
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 700,
+  offset: 64
+});

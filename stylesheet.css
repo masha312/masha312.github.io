@@ -76,7 +76,6 @@ header {
   background-color: rgba(120, 75, 49, 0.2);
 }
 .container ul {
-  line-height: 2;
   list-style: none;
 }
 .container ul li::before {
@@ -143,6 +142,20 @@ nav {
 }
 nav .nav-link:not(:last-child) {
   margin-right: 12px;
+}
+nav ul {
+  line-height: 2;
+}
+nav a {
+  transition: all 50ms ease-in-out;
+}
+.final-note {
+  margin: 120px 0px;
+}
+.fa-info-circle {
+  opacity: 0.3;
+  font-size: 14px;
+  margin-right: 2px;
 }
 @keyframes fadeIn {
   0% {

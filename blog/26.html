@@ -1,0 +1,103 @@
+<html>
+<head>
+    <!-- little changes make big differences -->
+    <title>Blog Post 26 - Masha S</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117363434-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-117363434-4');
+    </script>
+</head>
+<body>
+  <div class="container">
+    <header class="appear secondary-header">
+      <nav>
+        <a class="arrow-nav-link" href="../blog.html">⟵</a>
+      </nav>
+    <div class="blog-title">
+      <h1>5 visual improvements for HEY</h1>
+      <h2>October 12, 2020 | 4 min read</h2>
+    </div>
+    </header>
+    <div class="col-md-7">
+      <article class="appear">
+        <p>I tried HEY for the first time and these were a few things that jumped out right away. They, I believe, could have made my onboarding smoother and could have helped me to grasp the interface quicker.</p>
+        <p>I realize that you probably might have already thought of about some of these (if not all!) and they might be on their way. I understand that it's hard to make everything perfect from the start, especially when the top priority is to simply make things work properly.</p>
+        <p>Nevertheless, I wanted to share with you my observations. Visuals is also one my strongest qualities, so I didn't want to miss a chance to show it off :)</p>
+        <p>***</p>
+        <h3>Styles for hover overs</h3>
+        <p>The first thing I noticed was lack of style change when hovering over clickable elements, aside from the pointer cursor. While pointer cursor is undoubtedly a core indicator of clickable elements (although some might disagree...), it's always nice to get an extra feedback.</p>
+        <p>I saw a lot of various buttons on HEY without hover over states, which made me wonder whether it was a conscious choice. And if so, I would be very interested to learn the reasoning behind it.</p>
+        <div class="article-image">
+          <img style="width: 100%" alt="Gif of hovering over buttons without hover over background change" src="images-hey/4-before.gif"/>
+          <p class="caption">Current implementation without hover over change</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Gif of hovering over buttons with hover over background change" src="images-hey/4-after.gif"/>
+          <p class="caption">Without hover over background change</p>
+        </div>
+        <h3>Visual separation between components</h3>
+        <p>In day mode, white background of the page content sometimes blends with the white header. Because of that, it's easier to become disoriented when you're just learning the interface and still don't have mental image of the app architecture.</p>
+        <p>However, this can easily be solved with a tiny gray line under the header, which will right away establish the border between the components within fixed header and the page content itself.</p>
+        <div class="article-image">
+          <img style="width: 100%" alt="Gif of scrolling page content with the gray line" src="images-hey/1-before.gif"/>
+          <p class="caption">Without the gray line</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Gif of scrolling page content with the gray line" src="images-hey/1-after.gif"/>
+          <p class="caption">With the gray line</p>
+        </div>
+        <h3>Current menu item indicator</h3>
+        <p>Another thing that would be helpful for creating a mental map of the app and nagivating around the app easier is adding distinct styles for a current menu item.</p>
+        <div class="article-image">
+          <img style="width: 100%" alt="Screenshot of center navigation menu without current menu item indicator" src="images-hey/3b-before.png"/>
+          <p class="caption">Center nav menu without current menu item indicator</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Screenshot of center navigation menu with current menu item indicator" src="images-hey/3b-after.png"/>
+          <p class="caption">Center nav menu with current menu item indicator</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Screenshot of right navigation menu without current menu item indicator" src="images-hey/3a-before.png"/>
+          <p class="caption">Currently, when opening up the right nav menu, the highlight defaults to the first option.</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Screenshot of right navigation menu with current menu item indicator" src="images-hey/3a-after.png"/>
+          <p class="caption">Active menu option can have a different font color and/or a different shade of background highlight.</p>
+        </div>
+        <h3>Border-radius for all</h3>
+        <p>Rounding corners of elements makes the interface feel softer and more welcoming. When one decides to pursue this strategy though, it's important to make sure that it gets applied even to the most subtle elements. For example, while hover background for email list items is very subtle and transparent, it's still should have border-radius in order to keep in sync with other components.</p>
+        <div class="article-image">
+          <img style="width: 100%" alt="Screenshot of hovering over email list item, without background border radius" src="images-hey/2-before.png"/>
+          <p class="caption">Hovering over email list item, without background border radius</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Screenshot of hovering over email list item, with 4 pixel background border radius" src="images-hey/2-after.png"/>
+          <p class="caption">Hovering over email list item, with 4px background border radius</p>
+        </div>
+        <h3>Text vs Default cursor</h3>
+        <p>This one is super minor and might be very specific to me personally, as I haven't noticed many other website and apps that do this. In short, I believe that "text" cursors should only be used in cases where you may want to type (input fields for forms, search) or, maybe, to copy text (email, article). In most other cases, the cursor should be "default" (headers, descriptions, tags). Given that "text" cursor is applied automatically to text, it always takes extra to change it to the "default" arrow cursor.</p>
+        <p>Despite that, I believe it's worth the effort since it helps one to stay focused and interact only with the parts that are necessary.</p>
+        <div class="article-image">
+          <img style="width: 100%" alt="Gif of hovering over header and description, with automatic 'text' cursor appearing on hover" src="images-hey/5-before.gif"/>
+          <p class="caption">"Text" cursor applies automatically when hovering over text blocks</p>
+        </div>
+        <div class="article-image">
+          <img style="width: 100%" alt="Gif of hovering over header and description, with modified 'default' cursor appearing on hover" src="images-hey/5-after.gif"/>
+          <p class="caption">"Text" cursor is changed to "Default" when hovering over text blocks</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
+
+<script src="../main.js"></script>

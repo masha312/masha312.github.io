@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap');
 
 @beige: #f4f0e2;
+@darkerbeige: #eedec2;
 @brown: #784b31;
 @gray: #2C2C2C;
 @navy: #083466;
@@ -79,7 +80,6 @@ header {
     }
 
     ul {
-      line-height: 2;
       list-style: none;
 
       li::before {
@@ -163,6 +163,25 @@ nav {
   .nav-link:not(:last-child) {
     margin-right: 12px;
   }
+
+  ul {
+    line-height: 2;
+  }
+
+  a {
+    transition: all 50ms ease-in-out;
+  }
+}
+
+.final-note {
+  margin: 120px 0px;
+}
+
+// Icons
+.fa-info-circle {
+  opacity: 0.3;
+  font-size: 14px;
+  margin-right: 2px;
 }
 
 @keyframes fadeIn {
