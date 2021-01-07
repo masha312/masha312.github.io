@@ -1,0 +1,162 @@
+<html>
+<head>
+    <!-- little changes make big differences -->
+    <title>Blog Post 27 - Masha S</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117363434-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-117363434-4');
+    </script>
+</head>
+<body>
+  <div class="container">
+    <header class="appear secondary-header">
+      <nav>
+        <a class="arrow-nav-link" href="../blog.html">⟵</a>
+      </nav>
+    <div class="blog-title">
+      <h1>Component Libraries for Enterprise SaaS</h1>
+      <h2>Nov 23, 2020 | 6 min read</h2>
+    </div>
+    </header>
+    <div class="col-md-7">
+      <article class="appear">
+      <h3>Intro + Background</h3>
+      <p>In this article, I’m going to go over how we organize component libraries at here at LogicManager.</p>
+      <p>LogicManager (or LM, for short) is a complex tool for enterprise risk management. It consists of numerous areas, such as:</p>
+      <ul>
+        <li>Risk library — a place where you can store all risks that might be applicable to your company</li>
+        <li>Plans area — a place where you can conduct a risk assessment by department</li>
+        <li>Incidents — a place where you can keep track of any issues that come up</li>
+        <li>…etc.</li>
+      </ul>
+      <p>And it also has quite a few core features:</p>
+      <ul>
+        <li>Workflows</li>
+        <li>Form builder</li>
+        <li>Rule builder</li>
+        <li>…etc.</li>
+      </ul>
+      <p>While there are many “universal” components that are shared across all areas/features, there are still a lot of the ones that are area- or feature-specific.</li>
+      <h3>Component Library v1</h3>
+      <p>When we first began developing the app, we started with some very basic functionality and for a while, we only needed the aforementioned “universal” components (breadcrumbs, input fields, buttons…).</p>
+      <p>We expected that having just two files inside our Component Library project would be enough: one file for colors/typography/spacing and one with all components, organized by pages using the atomic design system.</p>
+      <p>It looked something like this:</p>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-1.png"/>
+        <p class="caption">Component Library project in Figma</p>
+      </div>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-2.png"/>
+        <p class="caption">Pages inside “Components” file</p>
+      </div>
+      <p>And this did work well, for some time.</p>
+      <p>However, as we started going farther down the roadmap and implementing more complex areas/features, things started to get messy. Unintentionally, we developed a new way of working which didn’t allow us to maintain the existing set up.</p>
+      <p>Here’s what happened:</p>
+      <ol>
+        <li>Every time we would start working on a new project, we would create a new file inside <b>Component Library</b> for exploration (in order to avoid cluttering up the <b><em>Components</em></b> file)</li>
+        <li>We would create new components and prototypes in that new file</li>
+        <li>We would then iterate in that file until we solidified the new design</li>
+        <li>By the time we would be done with designs, it would be time to make specs for devs</li>
+        <li>And after all that, it would be too late and inconvenient to transfer new components to the original <b><em>Components</em></b> file</li>
+      </ol>
+      <p>As a result we ended up having numerous component files for different areas and features. Those files neither had a matching page structure nor a matching naming convention for the components.</p>
+      <p>This is what our <b>Component Library</b> project started to look like:</p>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-3.png"/>
+        <p class="caption">It’s worth noting that components in files were not necessarily differentiated between features/areas. Some files contained components that belonged to an area and a feature. And then those same components would be used in another file for some other area. There was a lot of overlapping.</p>
+      </div>
+      <p>Pages inside files were not organized either:</p>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-4.png"/>
+      </div>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-5.png"/>
+        <p class="caption">Examples of pages in different files</p>
+      </div>
+      <p>And we didn’t have a naming convention for the components:</p>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-6.png"/>
+      </div>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-7.png"/>
+        <p class="caption">Examples of pages in different files</p>
+      </div>
+      <p>While it was easy ignore the problem when we were jumping from feature to feature, things got more difficult when we stopped implementing new features and began working on enhancing existing user flows.</p>
+      <p>To do so, we had to create numerous prototypes that touched several areas of the app and relied on multiple features. The existing organization of component libraries wasn’t suitable to complete this work quickly and efficiently.</p>
+      <h3>Component Library v2</h3>
+      <p>We had two problems to solve: first, organize the files and second, create a naming convention for components.</p>
+      <h4>Problem 1: File organization</h4>
+      <p>At first we considered transferring all existing feature-/area-specific components to our original <b><em>Components</b></em> file. However, that quickly proved to be a terrible idea for the following reasons:<p>
+      <ul>
+        <li>It would be a huge time commitment</li>
+        <li>We would lose connections to all existing instances of those components</li>
+        <li>It might do more harm than good — maintaining components will most likely become a pain + there’s a high chance that a large number of components will slow down the file</li>
+        <li>It’s not scalable. If we were to implement new features, we would most likely do what we found worked best before — create a new file (and then the cycle would repeat…)</li>
+      </ul>
+      <p>Therefore, we decided to keep the feature-/area-specific component files with the following adjustments:</p>
+      <ul>
+        <li>Every file would have the same page structure</li>
+        <li>Every file would only have feature-specific or area-specific components. If a component is used across multiple areas, then it should be moved to the original <b><em>Components</em></b> file.</li>
+      </ul>
+      <p>This ended up being a much, much better solution. While we still lost some instance connections, we ended up with cleaner (and smaller) files.</p>
+      <p>This is what the <b>Component Library</b> project looks like now:</p>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-8.png"/>
+        <p class="caption">💚 -> components for the entire app, 💙 -> specific area, 🧡 -> specific feature</p>
+      </div>
+      <p>As for organization of pages within files, we decided to implement atomic design structure there as well — with some flexibility.</p>
+      <p>Depending on the feature or the area, we created pages based on what made the most sense for that file. For example, a file for <b><em>User Management</b></em> only has “Organisms” and “Templates” pages, whereas a file for <b><em>Workflows</em></b> has “Atoms”, “Molecules”, “Organisms”, and “Templates”.</p>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-9.png"/>
+      </div>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-10.png"/>
+        <p class="caption">Pages for “User Management” vs. “Workflows”. Even though files may require different layers, they follow the same atomic structure.</p>
+      </div>
+      <p>We also ended up modifying our original <b><em>Components</b></em> (renamed to <b><em>Universal Components</em></b>) file:</p>
+      <ol>
+        <li>It now only includes “Atoms”, “Molecules”, and “Organisms”. Any existing templates or pages were moved to new files related to that specific area or feature.</li>
+        <li>It now also includes Colors, Typography, and Spacing. To be quite honest, there was no specific reason for moving it. Maybe it wasn’t a good idea..</li>
+      </ol>
+      <p>Lastly, as you may have noticed we no longer include prototypes in our component files. We learned the hard way that it’s better to keep prototypes in a different file to make sure nothing breaks in case you modify components without intending them to affect the prototype.</p>
+      <h4>Problem 2: Naming convention for components</h4>
+      <p>I don’t think there’s a wrong way to do this, as long as you settle on one system that’s easy to remember when naming new components and makes it easy to search for existing ones. Here’s what we did:</p>
+      <ul>
+        <li>Our component names are lowercase, with underscore for spaces.<br/>
+        For example, “user_management” instead of “userManagement”.</li>
+        <li>We don’t have abbreviations or contractions to make it easier to find components.<br/>
+        For example, “workflows” instead of “wf”.</li>
+        <li>We try to utilize Figma’s instance swapping feature whenever possible, by using the slash (/) structure. It helps to ensure that only related components can be swapped.</br>
+        For example, “feature_name/<b>dropdown</b>/dropdown_name” instead of “feature_name/dropdown_name” or “feature_name/tab/tab_name” instead of “feature_name/tab_name”. This will easily allow to swap instances later on, as seen below:<li>
+      </ul>
+      <div class="article-image">
+        <img style="width: 100%" src="images/27-11.png"/>
+        <p class="caption">Using slash (/) structure for instance swapping.</p>
+      </div>
+      <h3>Conclusion</h3>
+      <p>To summarize, here’s what we did:</p>
+      <ol>
+        <li>Created 3 color-coded categories of files in our component library: one for universal components (ideally only has one file), for feature-specific components, and for area-specific components.</li>
+        <li>Standardized page structure across all files using atomic design methodology.</li>
+        <li>Created a matching naming convention between files to utilize Figma’s instance swapping feature.</li>
+        <li>The biggest difference between our previous component library set up and this one is that it allows for growth — at least for the time being.</li>
+      </ol>
+      <p>* * *</p>
+      <p>That’s it! Thank you for reading. Any feedback is appreciated and I would be happy to learn how you organize your component files as well.</p>
+      <p>Also, here’s a <a href="https://www.figma.com/community/file/912808723643383897" target="_blank">Figma community file</a> with a simplified example of what our files look like and how we name our components for instance swapping.</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
+
+<script src="../main.js"></script>
