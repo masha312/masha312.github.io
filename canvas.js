@@ -81,7 +81,7 @@ new p5(s1);
 
 let s2 = function(sketch) {
   sketch.preload = function() {
-    sketch.font = sketch.loadFont('/lora-medium.ttf')
+    sketch.font = sketch.loadFont('public/lora-medium.ttf')
   }
   sketch.setup = function() {
     let cnv = sketch.createCanvas(504, 400);
@@ -136,7 +136,7 @@ new p5(s2);
 
 let s3 = function(sketch) {
   sketch.preload = function() {
-    sketch.font = sketch.loadFont('/lora-medium.ttf')
+    sketch.font = sketch.loadFont('public/lora-medium.ttf')
   }
   sketch.setup = function() {
     let cnv = sketch.createCanvas(504, 400);
