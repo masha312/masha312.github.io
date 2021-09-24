@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Chinatown",
+    "density": 52320
+  },
+  {
+    "name": "Bay Village",
+    "density": 49840
+  },
+  {
+    "name": "Beacon Hill",
+    "density": 47770
+  },
+  {
+    "name": "North End",
+    "density": 42240
+  },
+  {
+    "name": "Fenway",
+    "density": 37980
+  },
+  {
+    "name": "Kenmore",
+    "density": 34440
+  },
+  {
+    "name": "South End",
+    "density": 32320
+  },
+  {
+    "name": "Leather District",
+    "density": 26700
+  },
+  {
+    "name": "Back Bay",
+    "density": 26280
+  },
+  {
+    "name": "Mission Hill",
+    "density": 22640
+  },
+  {
+    "name": "Allston",
+    "density": 19000
+  },
+  {
+    "name": "Longwood",
+    "density": 17560
+  },
+  {
+    "name": "West End",
+    "density": 17420
+  },
+  {
+    "name": "Brighton",
+    "density": 16430
+  },
+  {
+    "name": "Dorchester",
+    "density": 14000
+  },
+  {
+    "name": "Roxbury",
+    "density": 14810
+  },
+  {
+    "name": "Downtown",
+    "density": 9800
+  },
+  {
+    "name": "Mattapan",
+    "density": 12750
+  },
+  {
+    "name": "Charlestown",
+    "density": 12190
+  },
+  {
+    "name": "South Boston",
+    "density": 11100
+  },
+  {
+    "name": "Jamaica Plain",
+    "density": 10360
+  },
+  {
+    "name": "Roslindale",
+    "density": 9880
+  },
+  {
+    "name": "West Roxbury",
+    "density": 5640
+  },
+  {
+    "name": "East Boston",
+    "density": 8590
+  },
+  {
+    "name": "Harbor Islands",
+    "density": 0
+  },
+  {
+    "name": "Hyde Park",
+    "density": 7470
+  },
+  {
+    "name": "South Boston Waterfront",
+    "density": 7000
+  }
+]
