@@ -108,6 +108,7 @@ a {
   max-width: 280px;
   margin: 32px;
   box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  -webkit-backface-visibility: hidden;
 }
 
 .photo__caption {
@@ -280,6 +281,10 @@ canvas {
 
   .card {
     width: 100%;
+  }
+
+  .section--about__content {
+    padding: 24px;
   }
 }
 
