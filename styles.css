@@ -61,6 +61,10 @@ a {
   align-self: flex-start;
 }
 
+.toggle:hover {
+  cursor: pointer;
+}
+
 .toggle__caret {
   width: 12px;
   height: 16px;
@@ -72,7 +76,7 @@ a {
 }
 
 /* ABOUT SECTION */
-.section--about__link {
+.section--about__link, .card__link a {
   background-image: linear-gradient(90deg, rgba(3,17,172,0.03) 0%, rgba(3,17,172,0.03) 50%, #FFF9BE 50%, #FFF9BE 100%);
   background-size: 200%;
   transition: background-position 0.3s cubic-bezier(.47, .1, 1, .63), color .2s linear;
@@ -80,7 +84,7 @@ a {
 
 }
 
-.section--about__link:hover {
+.section--about__link:hover, .card__link a:hover {
   background-position: -100% 100%;
 }
 
@@ -88,31 +92,6 @@ a {
   display: none;
   flex-direction: column;
   padding: 48px;
-  margin-bottom: 400px;
-}
-
-.section--about__photo {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: flex-start;*/
-  margin: 16px 0px;
-  position: relative;
-}
-
-.photo__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 280px;
-  margin: 32px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.08);
-  -webkit-backface-visibility: hidden;
-}
-
-.photo__caption {
-  /* margin-top: 4px; */
 }
 
 /* CARDS */
@@ -151,9 +130,11 @@ a {
 }
 
 .card__link {
-  transition: 0.3s;
   margin-bottom: 12px;
-  color: var(--link);
+}
+
+.card__link a {
+  padding-left: 8px;
 }
 
 .card__info  {
@@ -170,6 +151,7 @@ a {
   justify-content: center;
   transition: 0.3s;
   font-size: 24px;
+  background-color: #fff;
 }
 
 .card__arrow {
@@ -321,7 +303,6 @@ canvas {
 }
 
 ::-webkit-scrollbar-button {
-  display: none;
   display: none;
 }
 
