@@ -21,7 +21,7 @@
 }
 
 body {
-    margin: 40px;
+    margin: 64px 24px;
     font-size: 20px;
     line-height: 1.4;
 }
@@ -42,7 +42,7 @@ h2 {
   margin-top: 24px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 720px) {
   body {
 
       margin: 64px auto;
@@ -62,7 +62,7 @@ ul {
 }
 
 li {
-  line-height: 1.6;
+  line-height: 2;
 }
 
 /* ABOUT SECTION */
