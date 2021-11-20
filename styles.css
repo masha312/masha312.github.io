@@ -21,7 +21,7 @@
 }
 
 body {
-    margin: 64px 24px;
+    margin: 64px 32px;
     font-size: 20px;
     line-height: 1.4;
 }
@@ -53,19 +53,19 @@ h2 {
 
 p {
   margin: 0px;
-  padding-bottom: 24px;
+  padding-top: 32px;
 }
 
 ul {
   padding: 0px 24px;
+  padding-top: 16px;
   margin: 0px;
 }
 
 li {
-  line-height: 2;
+  padding: 6px 0px;
 }
 
-/* ABOUT SECTION */
 .text-link {
   text-decoration: none;
   color: rgba(3,17,172);
@@ -85,7 +85,7 @@ header {
   flex-direction: row;
   align-items: center;
   margin-top: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .avatar {
@@ -99,27 +99,13 @@ header {
   border-radius: 4px;
   opacity: 0.9;
   transition: 0.3s;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
+  margin-top: 8px;
 }
 
 .screenshot:hover {
   opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-.approach-to-life {
-  background-color: #ffffeb;
-  margin: 12px 0px;
-}
-
-
 
 
 
