@@ -135,30 +135,11 @@ header {
 }
 
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-  width: 14px;
-  display: none;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 14px 14px transparent;
-  border: solid 4px transparent;
-  display: none;
-}
-
-::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 14px 14px #efcae4;
-  border: solid 4px transparent;
-  border-radius: 14px;
-  display: none;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-}
-
 /* MO JS */
 div[data-name="mojs-shape"] {
   z-index: 2;
 }
+
+/* .extra-content--inline, .extra-content--block {
+  display: none;
+} */
