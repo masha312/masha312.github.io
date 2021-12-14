@@ -7,9 +7,13 @@
 body {
     margin: 64px 32px;
     font-size: 20px;
-    line-height: 1.4;
+    line-height: 1.6;
     font-family: 'Switzer', sans-serif;
     font-weight: 300;
+}
+
+section {
+  padding: 16px 0px;
 }
 
 h1 {
@@ -22,10 +26,12 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin:  16px 0px;
-  margin-top: 24px;
+  margin-bottom: 0px;
+  margin-top: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #595959;
+  font-weight: 300;
 }
 
 @media (min-width: 720px) {
@@ -39,7 +45,7 @@ h2 {
 
 p {
   margin: 0px;
-  padding-top: 32px;
+  padding-top: 16px;
 }
 
 ul {
@@ -50,7 +56,7 @@ ul {
 }
 
 li {
-  padding: 6px 0px;
+  padding: 8px 0px;
 }
 
 li a {
@@ -82,8 +88,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 24px;
-  margin-bottom: 16px;
+  margin: 8px 0px;
 }
 
 .avatar {
@@ -137,6 +142,48 @@ div[data-name="mojs-shape"] {
   z-index: 2;
 }
 
-/* .extra-content--inline, .extra-content--block {
+.extra-content--inline, .extra-content--block {
   display: none;
-} */
+}
+
+label {
+    position: sticky;
+    top: 0;
+    padding: 16px 8px;
+    text-align: end;
+    background: #ffffffba;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+}
+
+label span {
+    transition: 0.3s;
+}
+
+label span:hover {
+    opacity: 1;
+}
+
+.toggle--short {
+    margin-right: 8px;
+}
+
+.toggle--long {
+    opacity: 0.4;
+}
+
+input:checked ~ .toggle--long {
+    opacity: 1;
+}
+
+input:checked ~ .toggle--short {
+    opacity: 0.4;
+}
+
+input {
+    display:none;
+}
