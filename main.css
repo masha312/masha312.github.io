@@ -1,11 +1,11 @@
 :root {
   --link: #33a8ff;
-  --color-light-blue: rgba(3,17,172,0.01);
+  --color-light-blue: rgb(252 252 254);
   --color-yellow: #FFF9BE;
 }
 
 body {
-    margin: 64px 32px;
+    margin: 0px;
     font-size: 20px;
     line-height: 1.6;
     font-family: 'Switzer', sans-serif;
@@ -36,12 +36,18 @@ h2 {
 }
 
 @media (min-width: 720px) {
-  body {
+  .page--main {
 
       margin: 64px auto;
       max-width: 560px;
+
   }
 
+  .portfolio__content {
+    margin: 64px auto;
+    margin-top: 16px;
+    max-width: 720px;
+  }
 }
 
 p {
@@ -181,19 +187,19 @@ label span:hover {
     opacity: 1;
 }
 
-.toggle--short {
+.toggle--1 {
     margin-right: 8px;
 }
 
-.toggle--long {
+.toggle--2 {
     opacity: 0.4;
 }
 
-input:checked ~ .toggle--long {
+input:checked ~ .toggle--2 {
     opacity: 1;
 }
 
-input:checked ~ .toggle--short {
+input:checked ~ .toggle--1 {
     opacity: 0.4;
 }
 
