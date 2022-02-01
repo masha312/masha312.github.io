@@ -1,8 +1,15 @@
+/* PORTFOLIO STRUCTURE */
 .portfolio__cover {
   width: 100%;
   margin-bottom: 48px;
   border-radius: 4px;
   box-shadow: 0px 0px 8px #81818140;
+}
+
+.portfolio__content {
+  margin: 64px auto;
+  margin-top: 16px;
+  max-width: 720px;
 }
 
 .portfolio__image {
@@ -94,7 +101,7 @@
     margin: 16px 0px;
 }
 
-.node--task {
+.workflow__task {
   cursor: pointer;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -102,32 +109,32 @@
   position: relative;
 }
 
-.node--task:hover {
+.workflow__task:hover {
   cursor: pointer;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.node--task:hover .action-button--delete {
+.workflow__task:hover .workflow__button--delete {
   opacity: 1;
 }
 
-.color-bar--request {
+.task__color-bar--request {
   background: rgba(0, 181, 173, 1);
 }
 
-.color-bar--notification {
+.task__color-bar--notification {
   background: rgba(224, 57, 151, 1);
 }
 
-.color-bar--questionnaire {
+.task__color-bar--questionnaire {
   background: rgba(33, 133, 208, 1);
 }
 
-.color-bar--approval {
+.task__color-bar--approval {
   background: rgba(249, 200, 78, 1);
 }
 
-.color-bar {
+.task__color-bar {
   height: 12px;
   width: 192px;
   border-radius: 4px 4px 0px 0px;
@@ -154,12 +161,11 @@
   font-size: 12px;
 }
 
-.action-button {
+.workflow__button {
   height: 30px;
   width: 30px;
   background-color: #f6f6f6;
   border-radius: 100%;
-  /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,38 +174,38 @@
   cursor: pointer;
 }
 
-.action-button--delete {
+.workflow__button--delete {
   position: absolute;
   top: 6px;
   right: 8px;
   opacity: 0;
 }
 
-.action-button svg {
+.workflow__button svg {
   opacity: 0.7;
 }
 
-.action-button:hover svg {
+.workflow__button:hover svg {
   opacity: 1;
 }
 
-.divider--vertical {
+.workflow__divider {
     height: 16px;
     width: 2px;
     background: #d2d2d2;
     margin: 2px 0px;
 }
 
-.node--start, .node--end {
+.workflow__start, .workflow__end {
     height: 24px;
     width: 24px;
     border-radius: 100%;
 }
 
-.node--start {
+.workflow__start {
     background-color: #CBE5A7;
 }
-.node--end {
+.workflow__end {
     background-color: #ED9393;
 }
 
@@ -211,8 +217,11 @@
         padding: 0px ;
         flex-direction: row;
         justify-content: flex-start;
+        width: 100%;
     }
-
+    .portfolio__header a {
+      width: 100%;
+    }
     .portfolio__header .progress__container {
         display: none;
     }

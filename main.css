@@ -42,16 +42,7 @@ h2 {
 
 @media (min-width: 720px) {
   .page--main {
-
       margin: 64px auto;
-      /* max-width: 560px; */
-
-  }
-
-  .portfolio__content {
-    margin: 64px auto;
-    margin-top: 16px;
-    max-width: 720px;
   }
 }
 
@@ -101,7 +92,6 @@ header {
   flex-direction: row;
   align-items: center;
   margin: 8px 0px;
-
   position:sticky;
   top: 0;
   background: #ffffffd4;
@@ -129,11 +119,6 @@ header {
 .screenshot:hover {
   opacity: 1;
 }
-
-
-
-
-
 
 @keyframes fadeIn {
   0% {
@@ -176,7 +161,6 @@ label {
     z-index: 2;
     display: flex;
     flex-direction: row;
-    /* flex-direction: column; */
     justify-content: flex-end;
     font-size: 16px;
     cursor: pointer;
