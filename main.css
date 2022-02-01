@@ -156,6 +156,7 @@ label {
     position: sticky;
     top: 0;
     padding: 16px 8px;
+    margin-bottom: 8px;
     text-align: end;
     background: #ffffffd4;
     z-index: 2;
