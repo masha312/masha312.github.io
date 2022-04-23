@@ -34,8 +34,8 @@ h2 {
 }
 
 .page--main {
-  margin: 64px 24px;
-  max-width: 560px;
+  margin: 64px 32px;
+  max-width: 480px;
 }
 
 @media (min-width: 720px) {
