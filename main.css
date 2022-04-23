@@ -27,10 +27,8 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 0px;
-  margin-top: 12px;
+  margin: 0px;
   font-size: 16px;
-  text-transform: uppercase;
   color: #595959;
   font-weight: 300;
 }
@@ -48,32 +46,9 @@ h2 {
 
 p {
   margin: 0px;
-  padding-top: 16px;
 }
 
-ul {
-  padding: 0px;
-  padding-top: 8px;
-  margin: 0px;
-  list-style: none;
-}
-
-li {
-  padding: 8px 0px;
-}
-
-li a {
-  margin-left: 8px;
-}
-
-li::before {
-  content: url('arrow.svg');
-  opacity: 0.2;
-  position: relative;
-  top: 4px;
-}
-
-.text-link {
+a {
   text-decoration: none;
   color: rgba(3,17,172);
   background-image: linear-gradient(90deg, var(--color-light-blue) 0%, var(--color-light-blue) 50%, var(--color-yellow) 50%, var(--color-yellow) 100%);
@@ -91,14 +66,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 8px 0px;
-  position:sticky;
-  top: 0;
-  background: #ffffffd4;
-  z-index: 2;
-  backdrop-filter: blur(4px);
-  transition: 0.3s;
-
+  margin: 16px 0px;
 }
 
 .avatar {
@@ -106,18 +74,6 @@ header {
   border-radius: 100%;
   margin-right: 24px;
   transition-duration: 0.3s;
-}
-
-.screenshot {
-  width: 95%;
-  border-radius: 4px;
-  opacity: 0.9;
-  transition: 0.3s;
-  margin: 16px 0px;
-}
-
-.screenshot:hover {
-  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -140,59 +96,4 @@ header {
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-play-state: paused;
-}
-
-
-/* MO JS */
-div[data-name="mojs-shape"] {
-  z-index: 2;
-}
-
-.extra-content--inline, .extra-content--block {
-  display: none;
-}
-
-label {
-    position: sticky;
-    top: 0;
-    padding: 16px 8px;
-    margin-bottom: 8px;
-    text-align: end;
-    background: #ffffffd4;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    font-size: 16px;
-    cursor: pointer;
-    backdrop-filter: blur(3px);
-    margin-left: auto;
-}
-
-label span {
-    transition: 0.3s;
-}
-
-label span:hover {
-    opacity: 1;
-}
-
-.toggle--1 {
-    margin-right: 8px;
-}
-
-.toggle--2 {
-    opacity: 0.4;
-}
-
-input:checked ~ .toggle--2 {
-    opacity: 1;
-}
-
-input:checked ~ .toggle--1 {
-    opacity: 0.4;
-}
-
-input {
-    display:none;
 }
