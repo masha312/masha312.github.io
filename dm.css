@@ -167,3 +167,12 @@ h2 {
   color: #fafafa;
   padding: 0rem 0.5rem;
 }
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
