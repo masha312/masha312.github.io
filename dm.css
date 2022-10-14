@@ -142,7 +142,9 @@ nav {
 
   .block {
     z-index: 100;
+    transform: translate3d(0, 0, 200px);
     background: #fafafa;
+    overflow-y: unset;
   }
 }
 
