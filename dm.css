@@ -1,27 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
 
+/* GENERAL */
+:root {
+  --red: #cd0000;
+  --white: #fafafa;
+  --black: #0f0f0f;
+  --gray: #ededed;
+}
 html {
-  background-color: #fafafa;
+  background-color: var(--white);
   overflow: hidden;
-}
-
-.photo {
-  height: 100vh;
-  width: 49vw;
-  object-fit: cover;
-}
-
-.logo {
-  width: 312px;
-}
-
-.block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  overflow-y: scroll;
 }
 
 body {
@@ -30,79 +18,42 @@ body {
   margin: 0px;
 }
 
-section.section--article {
-  column-width: 200px;
-  column-gap: 1.5rem;
-  border-bottom: 1px solid #ededed;
-  padding-bottom: 1.5rem;
-}
-
 h1 {
   font-size: 1.5rem;
-  margin: 0px;
+  margin: 0rem;
+  margin-bottom: 0.5rem;
   line-height: 100%;
 }
 
-caption {
-  color: #d2d2d2;
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  background: var(--red);
+  color: var(--white);
+  padding: 0rem 0.5rem;
 }
 
-/* concerts */
+h3 {
+  margin: 0;
+  font-weight: 300;
+}
+
 ol {
   margin: 0;
   padding: 0;
 }
 
-section.section--tour {
-  width: 100%;
-}
-
-.concert-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 1.5rem;
-  border-bottom: 1px solid #ededed;
-  padding-bottom: 1.5rem;
-}
-
-.concert {
-  border: 1px solid #0f0f0f;
-}
-
-.concert-date {
-  font-size: 1rem;
-  margin: 0px;
-  font-weight: 400;
-}
-
-.concert {
+ul {
+  margin: 0;
+  list-style: none;
+  gap: 0.75rem;
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  align-items: center;
-}
-.concert p {
-  margin: 0px;
-}
-
-.concert-meta {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.concert-location {
-  text-align: end;
-  font-size: 1.25rem;
-}
-
-.concert-notes {
-  width: 100%;
-  font-size: 0.85rem;
 }
 
 a {
-  color: #cd0000;
+  color: var(--red);
   text-decoration: none;
   border-bottom: 1px solid;
   font-size: 1.25rem;
@@ -112,19 +63,110 @@ a:hover {
   transform: scaleX(-1);
 }
 
+nav {
+  align-self: end;
+  margin-bottom: 2rem;
+}
+
+/* PHOTO */
+.photo {
+  height: 100vh;
+  width: 49vw;
+  object-fit: cover;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  overflow-y: scroll;
+}
+
+/* MAIN - IMAGE  */
+.logo {
+  width: 312px;
+}
+
+/* SECTION - ARTICLE */
+
+section.section--article {
+  column-width: 200px;
+  column-gap: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 1.5rem;
+}
+
+/* SECTION - TOUR */
+section.section--tour {
+  width: 100%;
+}
+
+.concert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 1.5rem;
+}
+
+.concert {
+  border: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.concert__date {
+  font-size: 1rem;
+  margin: 0px;
+  font-weight: 400;
+}
+
+.concert p {
+  margin: 0px;
+}
+
+.concert__meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: start;
+}
+
+.concert__location {
+  text-align: end;
+  font-size: 1.25rem;
+}
+
+.concert__notes {
+  width: 100%;
+  font-size: 0.85rem;
+}
+
 .concert:hover p,
 .concert:hover h3 {
-  color: #cd0000;
+  color: var(--red);
 }
 
 .concert:hover {
-  border-color: #cd0000;
+  border-color: var(--red);
 }
 
-nav {
-  align-self: end;
+/* FOR SCREEN READERS ONLY */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
+/* MOBILE */
 @media (max-width: 620px) {
   html {
     overflow: auto;
@@ -140,41 +182,10 @@ nav {
     top: 0;
   }
 
-  .block {
+  main {
     z-index: 100;
     transform: translate3d(0, 0, 200px);
-    background: #fafafa;
+    background: var(--white);
     overflow-y: unset;
   }
-}
-
-h3 {
-  margin: 0;
-  font-weight: 300;
-}
-
-ul {
-  margin: 0;
-  list-style: none;
-  gap: 0.75rem;
-  display: flex;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 300;
-  margin-top: 0rem;
-  margin-bottom: 1.5rem;
-  background: #cd0000;
-  color: #fafafa;
-  padding: 0rem 0.5rem;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
